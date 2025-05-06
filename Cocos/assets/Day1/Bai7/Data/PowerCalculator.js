@@ -23,8 +23,8 @@ cc.Class({
     },
 
     calculatePower() {
-        let hp = parseFloat(this.inputHP.string) || 0;
-        let mana = parseFloat(this.inputMana.string) || 0;
+        let hp = parseFloat(this.inputHP.string) || 0; //let trong JS la bien co the cap nhat gia tri ( khac voi const 1 xiu)
+        let mana = parseFloat(this.inputMana.string) || 0; // pare kieu float de nhan cac so thap phan
         let power = hp * mana;
         this.resultLabel.string = "Power: " + power;
     }
