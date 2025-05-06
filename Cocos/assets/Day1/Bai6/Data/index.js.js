@@ -11,7 +11,7 @@ cc.Class({
 
   onLoad() {
     this.buttonStart.node.on("click", this.onStartGame, this);
-    this.buttonExit.node.on("click", this.onExitGame, this);
+    this.buttonExit.node.on("click", this.onExitGame, this);// neu xai cai on "click thi khong can add truc tiep"
   },
 
   onStartGame() {
