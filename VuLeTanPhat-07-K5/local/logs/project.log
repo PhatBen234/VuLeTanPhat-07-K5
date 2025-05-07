@@ -1,0 +1,145 @@
+2025-05-07T12:43:50.732Z - normal: Load ~/.CocosCreator/settings.json
+2025-05-07T12:43:52.242Z - normal: Initializing Asset Database
+2025-05-07T12:43:52.244Z - normal: checking language setting...
+2025-05-07T12:43:52.244Z - normal: Language: en
+2025-05-07T12:43:53.070Z - success: preview server running at http://localhost:7456
+2025-05-07T12:43:53.072Z - success: protocol editor-framework registered
+2025-05-07T12:43:53.072Z - success: protocol app registered
+2025-05-07T12:43:53.072Z - success: protocol theme registered
+2025-05-07T12:43:53.073Z - success: protocol packages registered
+2025-05-07T12:43:53.073Z - success: protocol uuid registerred
+2025-05-07T12:43:53.073Z - success: protocol db registerred
+2025-05-07T12:43:53.073Z - success: protocol thumbnail registerred
+2025-05-07T12:43:53.073Z - success: protocol unpack registerred
+2025-05-07T12:43:53.073Z - success: protocol disable-commonjs registerred
+2025-05-07T12:43:54.049Z - normal: connected!
+2025-05-07T12:43:54.050Z - normal: Check project E:\VuLeTanPhat-07-K5\VuLeTanPhat-07-K5
+2025-05-07T12:43:54.052Z - normal: Initializing project E:\VuLeTanPhat-07-K5\VuLeTanPhat-07-K5
+2025-05-07T12:43:54.808Z - normal: Initializing Cocos2d
+2025-05-07T12:43:56.172Z - normal: Initializing engine extends
+2025-05-07T12:43:56.215Z - success: alipay-adapter loaded
+2025-05-07T12:43:56.226Z - success: asset-db-debugger loaded
+2025-05-07T12:43:56.232Z - success: baidu-adapter loaded
+2025-05-07T12:43:56.235Z - success: color-picker loaded
+2025-05-07T12:43:56.628Z - success: fb-audience-network loaded
+2025-05-07T12:43:56.975Z - success: fb-live-stream loaded
+2025-05-07T12:43:57.000Z - success: google-play-instant loaded
+2025-05-07T12:43:57.052Z - success: huawei-runtime loaded
+2025-05-07T12:43:57.671Z - success: cpk-publish loaded
+2025-05-07T12:43:57.672Z - success: jsb-adapter loaded
+2025-05-07T12:43:57.683Z - success: oppo-runtime loaded
+2025-05-07T12:43:57.690Z - success: package-manager loaded
+2025-05-07T12:43:57.942Z - success: qqplay-adapter loaded
+2025-05-07T12:43:57.944Z - success: runtime-dev-tools loaded
+2025-05-07T12:43:57.949Z - success: sdkbox loaded
+2025-05-07T12:43:57.955Z - success: tester loaded
+2025-05-07T12:43:57.958Z - success: ui-kit-preview-extra loaded
+2025-05-07T12:43:57.961Z - success: ui-kit-preview loaded
+2025-05-07T12:43:57.964Z - success: ui-kit loaded
+2025-05-07T12:43:57.975Z - success: vivo-runtime loaded
+2025-05-07T12:43:57.976Z - success: weapp-adapter loaded
+2025-05-07T12:43:57.977Z - success: xiaomi-adapter loaded
+2025-05-07T12:43:57.980Z - success: alipay-minigame loaded
+2025-05-07T12:43:58.049Z - success: assets loaded
+2025-05-07T12:43:58.052Z - success: builder loaded
+2025-05-07T12:43:58.714Z - success: cocos-services loaded
+2025-05-07T12:43:58.723Z - success: console loaded
+2025-05-07T12:43:58.818Z - success: fb-instant-games loaded
+2025-05-07T12:43:58.824Z - success: game-window loaded
+2025-05-07T12:43:58.826Z - success: google-instant-games loaded
+2025-05-07T12:43:58.840Z - success: hierarchy loaded
+2025-05-07T12:43:58.844Z - success: inspector loaded
+2025-05-07T12:43:58.846Z - success: keystore loaded
+2025-05-07T12:43:58.852Z - success: node-library loaded
+2025-05-07T12:43:58.855Z - success: package-asset loaded
+2025-05-07T12:43:58.856Z - success: preferences loaded
+2025-05-07T12:43:58.858Z - success: project-exporter loaded
+2025-05-07T12:43:58.861Z - success: project-importer loaded
+2025-05-07T12:43:58.864Z - success: project-settings loaded
+2025-05-07T12:43:58.877Z - success: scene loaded
+2025-05-07T12:43:58.884Z - success: simulator-debugger loaded
+2025-05-07T12:43:58.896Z - success: sprite-editor loaded
+2025-05-07T12:43:58.909Z - success: store loaded
+2025-05-07T12:43:58.932Z - success: timeline loaded
+2025-05-07T12:43:58.959Z - success: xiaomi-runtime loaded
+2025-05-07T12:44:00.422Z - normal: Loading packages
+2025-05-07T12:44:00.431Z - normal: Watching packages
+2025-05-07T12:44:01.118Z - normal: Run Application
+2025-05-07T12:44:02.256Z - info: Cocos Services load base data!
+2025-05-07T12:44:10.874Z - warn: Script attached to "messageLabel" in scene "Bai1.fire" is missing or invalid. Detailed information:
+Node path: "Canvas/messageLabel"
+Asset url: "db://assets/Day2/Bai1/Bai1.fire"
+Script UUID: "99b45f58-520b-4c9e-ad2f-72f67e31099c"
+Class ID: "99b459YUgtMnq0vcvZ+MQmc"
+
+2025-05-07T12:44:10.874Z - warn: Script attached to "playerHpLabel" in scene "Bai1.fire" is missing or invalid. Detailed information:
+Node path: "Canvas/playerHpLabel"
+Asset url: "db://assets/Day2/Bai1/Bai1.fire"
+Script UUID: "99b45f58-520b-4c9e-ad2f-72f67e31099c"
+Class ID: "99b459YUgtMnq0vcvZ+MQmc"
+
+2025-05-07T12:44:10.875Z - warn: Script attached to "playerMpLabel" in scene "Bai1.fire" is missing or invalid. Detailed information:
+Node path: "Canvas/playerMpLabel"
+Asset url: "db://assets/Day2/Bai1/Bai1.fire"
+Script UUID: "99b45f58-520b-4c9e-ad2f-72f67e31099c"
+Class ID: "99b459YUgtMnq0vcvZ+MQmc"
+
+2025-05-07T12:44:10.875Z - warn: Script attached to "playerAtkLabel" in scene "Bai1.fire" is missing or invalid. Detailed information:
+Node path: "Canvas/playerAtkLabel"
+Asset url: "db://assets/Day2/Bai1/Bai1.fire"
+Script UUID: "99b45f58-520b-4c9e-ad2f-72f67e31099c"
+Class ID: "99b459YUgtMnq0vcvZ+MQmc"
+
+2025-05-07T12:44:10.875Z - warn: Script attached to "playerDefLabel" in scene "Bai1.fire" is missing or invalid. Detailed information:
+Node path: "Canvas/playerDefLabel"
+Asset url: "db://assets/Day2/Bai1/Bai1.fire"
+Script UUID: "99b45f58-520b-4c9e-ad2f-72f67e31099c"
+Class ID: "99b459YUgtMnq0vcvZ+MQmc"
+
+2025-05-07T12:44:10.875Z - warn: Script attached to "enemyHpLabel" in scene "Bai1.fire" is missing or invalid. Detailed information:
+Node path: "Canvas/enemyHpLabel"
+Asset url: "db://assets/Day2/Bai1/Bai1.fire"
+Script UUID: "99b45f58-520b-4c9e-ad2f-72f67e31099c"
+Class ID: "99b459YUgtMnq0vcvZ+MQmc"
+
+2025-05-07T12:44:10.875Z - warn: Script attached to "enemyMpLabel" in scene "Bai1.fire" is missing or invalid. Detailed information:
+Node path: "Canvas/enemyMpLabel"
+Asset url: "db://assets/Day2/Bai1/Bai1.fire"
+Script UUID: "99b45f58-520b-4c9e-ad2f-72f67e31099c"
+Class ID: "99b459YUgtMnq0vcvZ+MQmc"
+
+2025-05-07T12:44:10.876Z - warn: Script attached to "enemyAtkLabel" in scene "Bai1.fire" is missing or invalid. Detailed information:
+Node path: "Canvas/enemyAtkLabel"
+Asset url: "db://assets/Day2/Bai1/Bai1.fire"
+Script UUID: "99b45f58-520b-4c9e-ad2f-72f67e31099c"
+Class ID: "99b459YUgtMnq0vcvZ+MQmc"
+
+2025-05-07T12:44:10.876Z - warn: Script attached to "enemyDefLabel" in scene "Bai1.fire" is missing or invalid. Detailed information:
+Node path: "Canvas/enemyDefLabel"
+Asset url: "db://assets/Day2/Bai1/Bai1.fire"
+Script UUID: "99b45f58-520b-4c9e-ad2f-72f67e31099c"
+Class ID: "99b459YUgtMnq0vcvZ+MQmc"
+
+2025-05-07T12:44:10.877Z - warn: Script attached to "GameManager" in scene "Bai1.fire" is missing or invalid. Detailed information:
+Node path: "Canvas/GameManager"
+Asset url: "db://assets/Day2/Bai1/Bai1.fire"
+Script UUID: "99b45f58-520b-4c9e-ad2f-72f67e31099c"
+Class ID: "99b459YUgtMnq0vcvZ+MQmc"
+
+2025-05-07T12:44:10.877Z - warn: Script attached to "GameManager" in scene "Bai1.fire" is missing or invalid. Detailed information:
+Node path: "Canvas/GameManager"
+Asset url: "db://assets/Day2/Bai1/Bai1.fire"
+Script UUID: "99b45f58-520b-4c9e-ad2f-72f67e31099c"
+Class ID: "99b459YUgtMnq0vcvZ+MQmc"
+
+2025-05-07T12:44:10.965Z - warn: The Asset used by component "cc.Sprite" in scene "Bai1.fire" is missing. Detailed information:
+Node path: "Canvas/Player/player"
+Asset url: "db://assets/Day2/Bai1/Bai1.fire"
+Missing uuid: "880382f9-5be5-4645-a0a5-c8a018cbcc29"
+
+2025-05-07T12:44:10.966Z - warn: The Asset used by component "cc.Sprite" in scene "Bai1.fire" is missing. Detailed information:
+Node path: "Canvas/Enemy/enemy"
+Asset url: "db://assets/Day2/Bai1/Bai1.fire"
+Missing uuid: "eddaaa99-9c26-4195-8a29-459b09b9c2ed"
+
+2025-05-07T12:44:24.276Z - info: shutdown preview server
