@@ -4,16 +4,6 @@ cc._RF.push(module, '1f8d4S9195BC5S320hB74PG', 'CharacterState', __filename);
 
 "use strict";
 
-// Learn cc.Class:
-//  - [Chinese] https://docs.cocos.com/creator/manual/zh/scripting/class.html
-//  - [English] http://docs.cocos2d-x.org/creator/manual/en/scripting/class.html
-// Learn Attribute:
-//  - [Chinese] https://docs.cocos.com/creator/manual/zh/scripting/reference/attributes.html
-//  - [English] http://docs.cocos2d-x.org/creator/manual/en/scripting/reference/attributes.html
-// Learn life-cycle callbacks:
-//  - [Chinese] https://docs.cocos.com/creator/manual/zh/scripting/life-cycle-callbacks.html
-//  - [English] https://www.cocos2d-x.org/docs/creator/manual/en/scripting/life-cycle-callbacks.html
-
 cc.Class({
   extends: cc.Component,
 
@@ -24,16 +14,22 @@ cc.Class({
 
   onLoad: function onLoad() {
     this.state = "Idle";
+
     this.updateStateLabel();
 
-    this.changeStateButton.node.on("click", this.toggleState, this);
+    this.changeStateButton.node.on("click", this.onChangeState, this);
+  },
+  onChangeState: function onChangeState() {
+    this.toggleState();
+    this.updateStateLabel();
   },
   toggleState: function toggleState() {
     this.state = this.state === "Idle" ? "Running" : "Idle";
-    this.updateStateLabel();
   },
   updateStateLabel: function updateStateLabel() {
-    this.stateLabel.string = "State: " + this.state;
+    if (this.stateLabel) {
+      this.stateLabel.string = "State: " + this.state;
+    }
   }
 });
 

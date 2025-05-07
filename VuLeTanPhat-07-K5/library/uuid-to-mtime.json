@@ -529,19 +529,14 @@
     "meta": 1746621972992,
     "relativePath": "Day1\\ScenceDay1"
   },
-  "1f8d44bd-d7de-410b-94b7-db4841ef83c6": {
-    "asset": 1746621972992,
-    "meta": 1746624494112,
-    "relativePath": "Day1\\Bai9\\Data\\CharacterState.js"
-  },
   "f3face1b-6c5f-4149-ae03-dfaf2bb8b598": {
     "asset": 1746621972993,
     "meta": 1746624494143,
     "relativePath": "Day1\\ScenceDay1\\Bai10.fire"
   },
   "243109fc-407e-4e0f-b803-baae9e51213b": {
-    "asset": 1746621972994,
-    "meta": 1746624494155,
+    "asset": 1746627345168,
+    "meta": 1746627345206,
     "relativePath": "Day1\\ScenceDay1\\Bai11.fire"
   },
   "0f26d129-2196-4f90-bdd0-25c28d1613a4": {
@@ -550,18 +545,18 @@
     "relativePath": "Day1\\ScenceDay1\\Bai3.fire"
   },
   "5915ae62-9856-405f-906c-7d1d7958f552": {
-    "asset": 1746621972996,
-    "meta": 1746624494168,
+    "asset": 1746627416205,
+    "meta": 1746627416220,
     "relativePath": "Day1\\ScenceDay1\\Bai6.fire"
   },
   "caa48a59-ec77-469c-a131-bff857f22fe3": {
-    "asset": 1746621972997,
-    "meta": 1746624494182,
+    "asset": 1746627481677,
+    "meta": 1746627481706,
     "relativePath": "Day1\\ScenceDay1\\Bai7.fire"
   },
   "a0325c3a-d73d-4f07-955d-6080b4787c52": {
-    "asset": 1746621972997,
-    "meta": 1746624494185,
+    "asset": 1746627554060,
+    "meta": 1746627554093,
     "relativePath": "Day1\\ScenceDay1\\Bai8.fire"
   },
   "f160f373-821e-47ef-9db5-c35747b8421c": {
@@ -575,8 +570,8 @@
     "relativePath": "Day2\\Bai1"
   },
   "9c43dfc1-b6de-4f8b-a1e3-c5094c23d972": {
-    "asset": 1746621972998,
-    "meta": 1746624494268,
+    "asset": 1746627907419,
+    "meta": 1746627907435,
     "relativePath": "Day1\\ScenceDay1\\Bai9.fire"
   },
   "afe26bc8-8017-4b86-8a7c-1ddbd7b8aa10": {
@@ -618,5 +613,10 @@
     "asset": 1746626408462,
     "meta": 1746626487380,
     "relativePath": "Day2\\Bai1\\Data\\GameManager.js"
+  },
+  "1f8d44bd-d7de-410b-94b7-db4841ef83c6": {
+    "asset": 1746627783479,
+    "meta": 1746627800351,
+    "relativePath": "Day1\\Bai9\\Data\\CharacterState.js"
   }
 }
