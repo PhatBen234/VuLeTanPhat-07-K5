@@ -51,13 +51,15 @@ cc.Class({
   },
 
   updateUI() {
-    // Update Player's UI
+    // Clamp HP to avoid negative numbers
+    this.player.health = Math.max(0, this.player.health);
+    this.enemy.health = Math.max(0, this.enemy.health);
+
     this.playerHpLabel.string = `Player HP: ${this.player.health}`;
     this.playerMpLabel.string = `Energy: ${this.player.energy}`;
     this.playerAtkLabel.string = `Attack: ${this.player.attack}`;
     this.playerDefLabel.string = `Defense: ${this.player.defense}`;
 
-    // Update Enemy's UI
     this.enemyHpLabel.string = `Enemy HP: ${this.enemy.health}`;
     this.enemyMpLabel.string = `Energy: ${this.enemy.energy}`;
     this.enemyAtkLabel.string = `Attack: ${this.enemy.attack}`;
@@ -65,15 +67,20 @@ cc.Class({
   },
 
   onAttack() {
+    if (this.gameOver) return;
     this.dealDamage(this.player, this.enemy, false);
+
     if (this.checkGameOver()) return;
     this.enemyTurn();
   },
 
   onSkill() {
+    if (this.gameOver) return;
+
     if (this.player.energy >= 30) {
       this.dealDamage(this.player, this.enemy, true);
       this.player.energy -= 30;
+
       if (this.checkGameOver()) return;
       this.enemyTurn();
     } else {
@@ -82,27 +89,37 @@ cc.Class({
   },
 
   onRecover() {
+    if (this.gameOver) return;
+
     this.player.energy = Math.min(this.player.energy + 20, 100);
     this.messageLabel.string = "Player recovers 20 energy!";
+    this.updateUI();
     this.enemyTurn();
   },
 
   dealDamage(attacker, defender, isSkill) {
     let baseDamage = attacker.attack - defender.defense;
-    baseDamage = Math.max(1, baseDamage); // Không âm
+    baseDamage = Math.max(1, baseDamage);
     let damage = isSkill ? baseDamage * 2 : baseDamage;
     defender.health -= damage;
+
+    // Prevent negative health
+    defender.health = Math.max(0, defender.health);
+
     this.messageLabel.string = `${
       isSkill ? "Skill" : "Attack"
     } dealt ${damage} damage`;
-    this.updateUI();
+    this.updateUI(); // Ensure UI reflects latest health
   },
 
   enemyTurn() {
-    setTimeout(() => {
-      if (this.gameOver) return; // Kiểm tra lại trước khi làm hành động của enemy
+    if (this.gameOver) return;
+
+    this.scheduleOnce(() => {
+      if (this.gameOver) return;
 
       let action = Math.random();
+
       if (this.enemy.energy >= 30 && action < 0.3) {
         this.dealDamage(this.enemy, this.player, true);
         this.enemy.energy -= 30;
@@ -115,22 +132,29 @@ cc.Class({
 
       this.updateUI();
       this.checkGameOver();
-    }, 500); // Delay chút để mô phỏng lượt
+    }, 0.5);
   },
 
   checkGameOver() {
+    let isOver = false;
+
     if (this.player.health <= 0) {
+      this.player.health = 0;
       this.messageLabel.string = "Enemy Wins!";
-      this.disableButtons();
-      this.gameOver = true; // Đánh dấu game đã kết thúc
-      return true; // Trả về true để dừng các hành động
+      isOver = true;
     }
 
     if (this.enemy.health <= 0) {
+      this.enemy.health = 0;
       this.messageLabel.string = "Player Wins!";
+      isOver = true;
+    }
+
+    if (isOver) {
+      this.gameOver = true;
       this.disableButtons();
-      this.gameOver = true; // Đánh dấu game đã kết thúc
-      return true; // Trả về
+      this.updateUI(); // Ensure final state is shown
+      return true;
     }
 
     return false;
