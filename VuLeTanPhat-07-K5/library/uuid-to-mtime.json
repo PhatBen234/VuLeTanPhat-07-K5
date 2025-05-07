@@ -574,11 +574,6 @@
     "meta": 1746627907435,
     "relativePath": "Day1\\ScenceDay1\\Bai9.fire"
   },
-  "afe26bc8-8017-4b86-8a7c-1ddbd7b8aa10": {
-    "asset": 1746622703879,
-    "meta": 1746621973002,
-    "relativePath": "Day2\\Data"
-  },
   "e51a7997-ea28-4ca3-a7a9-3ff600995b11": {
     "asset": 1746622703880,
     "meta": 1746621973003,
@@ -593,11 +588,6 @@
     "asset": 1746622703878,
     "meta": 1746622703878,
     "relativePath": "Day2\\Bai1\\Data"
-  },
-  "d20d01ec-1311-440a-8813-6654f853969e": {
-    "asset": 1746621973002,
-    "meta": 1746624494358,
-    "relativePath": "Day2\\Data\\GameManager.js"
   },
   "fe474da5-928a-4f0a-969f-0e0a3aaff29b": {
     "asset": 1746621973005,
