@@ -130,7 +130,7 @@ cc.Class({
       this.messageLabel.string = "Player Wins!";
       this.disableButtons();
       this.gameOver = true; // Đánh dấu game đã kết thúc
-      return true; // Trả về true để dừng các hành động
+      return true; // Trả về
     }
 
     return false;
