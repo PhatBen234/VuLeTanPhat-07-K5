@@ -24,7 +24,6 @@ cc.Class({
   },
 
   onLoad() {
-    // Khởi tạo stats cho player và enemy
     this.player = {
       health: 100,
       attack: this.getRandom(10, 20),
@@ -39,11 +38,9 @@ cc.Class({
       energy: 50,
     };
 
-    this.gameOver = false; // Biến kiểm tra trạng thái game
+    this.gameOver = false;
 
     this.updateUI();
-
-    // Gán sự kiện click
     this.attackBtn.node.on("click", this.onAttack, this);
     this.skillBtn.node.on("click", this.onSkill, this);
     this.recoverBtn.node.on("click", this.onRecover, this);
@@ -68,16 +65,12 @@ cc.Class({
   },
 
   onAttack() {
-    if (this.gameOver) return; // Không làm gì nếu game đã kết thúc
-
     this.dealDamage(this.player, this.enemy, false);
     if (this.checkGameOver()) return;
     this.enemyTurn();
   },
 
   onSkill() {
-    if (this.gameOver) return; // Không làm gì nếu game đã kết thúc
-
     if (this.player.energy >= 30) {
       this.dealDamage(this.player, this.enemy, true);
       this.player.energy -= 30;
@@ -89,8 +82,6 @@ cc.Class({
   },
 
   onRecover() {
-    if (this.gameOver) return; // Không làm gì nếu game đã kết thúc
-
     this.player.energy = Math.min(this.player.energy + 20, 100);
     this.messageLabel.string = "Player recovers 20 energy!";
     this.enemyTurn();
@@ -108,8 +99,6 @@ cc.Class({
   },
 
   enemyTurn() {
-    if (this.gameOver) return; // Không làm gì nếu game đã kết thúc
-
     setTimeout(() => {
       if (this.gameOver) return; // Kiểm tra lại trước khi làm hành động của enemy
 
