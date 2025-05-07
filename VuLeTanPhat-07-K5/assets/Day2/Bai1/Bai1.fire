@@ -80,41 +80,38 @@
         "__id__": 34
       },
       {
-        "__id__": 61
+        "__id__": 36
       },
       {
         "__id__": 38
       },
       {
-        "__id__": 41
+        "__id__": 40
+      },
+      {
+        "__id__": 42
       },
       {
         "__id__": 44
       },
       {
-        "__id__": 47
+        "__id__": 46
+      },
+      {
+        "__id__": 48
       },
       {
         "__id__": 50
       },
       {
-        "__id__": 53
-      },
-      {
-        "__id__": 56
-      },
-      {
-        "__id__": 59
-      },
-      {
-        "__id__": 63
+        "__id__": 52
       }
     ],
     "_active": true,
     "_level": 0,
     "_components": [
       {
-        "__id__": 65
+        "__id__": 54
       }
     ],
     "_prefab": null,
@@ -198,7 +195,7 @@
       "__type__": "cc.Vec3",
       "x": 0,
       "y": 0,
-      "z": 281.45825622994255
+      "z": 221.78911119499435
     },
     "_scale": {
       "__type__": "cc.Vec3",
@@ -1696,9 +1693,6 @@
     "_components": [
       {
         "__id__": 35
-      },
-      {
-        "__id__": 36
       }
     ],
     "_prefab": null,
@@ -1775,82 +1769,6 @@
     "_id": "72P01SN5dJTqtBUWDwX1zB"
   },
   {
-    "__type__": "99b459YUgtMnq0vcvZ+MQmc",
-    "_name": "",
-    "_objFlags": 0,
-    "node": {
-      "__id__": 34
-    },
-    "_enabled": true,
-    "playerHpLabel": {
-      "__id__": 37
-    },
-    "playerMpLabel": {
-      "__id__": 40
-    },
-    "playerAtkLabel": {
-      "__id__": 43
-    },
-    "playerDefLabel": {
-      "__id__": 46
-    },
-    "enemyHpLabel": {
-      "__id__": 49
-    },
-    "enemyMpLabel": {
-      "__id__": 52
-    },
-    "enemyAtkLabel": {
-      "__id__": 55
-    },
-    "enemyDefLabel": {
-      "__id__": 58
-    },
-    "messageLabel": {
-      "__id__": 35
-    },
-    "attackBtn": {
-      "__id__": 19
-    },
-    "skillBtn": {
-      "__id__": 26
-    },
-    "recoverBtn": {
-      "__id__": 33
-    },
-    "_id": "445RYt38RJ16ZH8EhWfRiU"
-  },
-  {
-    "__type__": "cc.Label",
-    "_name": "",
-    "_objFlags": 0,
-    "node": {
-      "__id__": 38
-    },
-    "_enabled": true,
-    "_materials": [
-      {
-        "__uuid__": "eca5d2f2-8ef6-41c2-bbe6-f9c79d09c432"
-      }
-    ],
-    "_useOriginalSize": false,
-    "_string": "HP",
-    "_N$string": "HP",
-    "_fontSize": 40,
-    "_lineHeight": 40,
-    "_enableWrapText": true,
-    "_N$file": null,
-    "_isSystemFontUsed": true,
-    "_spacingX": 0,
-    "_batchAsBitmap": false,
-    "_N$horizontalAlign": 1,
-    "_N$verticalAlign": 1,
-    "_N$fontFamily": "Arial",
-    "_N$overflow": 0,
-    "_N$cacheMode": 0,
-    "_id": "78kgXdghtIXIFlBnEeorFC"
-  },
-  {
     "__type__": "cc.Node",
     "_name": "playerHpLabel",
     "_objFlags": 0,
@@ -1863,9 +1781,6 @@
     "_components": [
       {
         "__id__": 37
-      },
-      {
-        "__id__": 39
       }
     ],
     "_prefab": null,
@@ -1912,57 +1827,11 @@
     "_id": "a3O1LjCZxHTq6OYXy48j/L"
   },
   {
-    "__type__": "99b459YUgtMnq0vcvZ+MQmc",
-    "_name": "",
-    "_objFlags": 0,
-    "node": {
-      "__id__": 38
-    },
-    "_enabled": true,
-    "playerHpLabel": {
-      "__id__": 37
-    },
-    "playerMpLabel": {
-      "__id__": 40
-    },
-    "playerAtkLabel": {
-      "__id__": 43
-    },
-    "playerDefLabel": {
-      "__id__": 46
-    },
-    "enemyHpLabel": {
-      "__id__": 49
-    },
-    "enemyMpLabel": {
-      "__id__": 52
-    },
-    "enemyAtkLabel": {
-      "__id__": 55
-    },
-    "enemyDefLabel": {
-      "__id__": 58
-    },
-    "messageLabel": {
-      "__id__": 35
-    },
-    "attackBtn": {
-      "__id__": 19
-    },
-    "skillBtn": {
-      "__id__": 26
-    },
-    "recoverBtn": {
-      "__id__": 33
-    },
-    "_id": "ad9JIeX7lDTYbdW6/86L0T"
-  },
-  {
     "__type__": "cc.Label",
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 41
+      "__id__": 36
     },
     "_enabled": true,
     "_materials": [
@@ -1971,8 +1840,8 @@
       }
     ],
     "_useOriginalSize": false,
-    "_string": "MP",
-    "_N$string": "MP",
+    "_string": "HP",
+    "_N$string": "HP",
     "_fontSize": 40,
     "_lineHeight": 40,
     "_enableWrapText": true,
@@ -1985,7 +1854,7 @@
     "_N$fontFamily": "Arial",
     "_N$overflow": 0,
     "_N$cacheMode": 0,
-    "_id": "ff/UphL7JHWIXAXkGopD0u"
+    "_id": "78kgXdghtIXIFlBnEeorFC"
   },
   {
     "__type__": "cc.Node",
@@ -1999,10 +1868,7 @@
     "_level": 1,
     "_components": [
       {
-        "__id__": 40
-      },
-      {
-        "__id__": 42
+        "__id__": 39
       }
     ],
     "_prefab": null,
@@ -2049,57 +1915,11 @@
     "_id": "c9OHqFW3pL1aOaE1CS4uY7"
   },
   {
-    "__type__": "99b459YUgtMnq0vcvZ+MQmc",
-    "_name": "",
-    "_objFlags": 0,
-    "node": {
-      "__id__": 41
-    },
-    "_enabled": true,
-    "playerHpLabel": {
-      "__id__": 37
-    },
-    "playerMpLabel": {
-      "__id__": 40
-    },
-    "playerAtkLabel": {
-      "__id__": 43
-    },
-    "playerDefLabel": {
-      "__id__": 46
-    },
-    "enemyHpLabel": {
-      "__id__": 49
-    },
-    "enemyMpLabel": {
-      "__id__": 52
-    },
-    "enemyAtkLabel": {
-      "__id__": 55
-    },
-    "enemyDefLabel": {
-      "__id__": 58
-    },
-    "messageLabel": {
-      "__id__": 35
-    },
-    "attackBtn": {
-      "__id__": 19
-    },
-    "skillBtn": {
-      "__id__": 26
-    },
-    "recoverBtn": {
-      "__id__": 33
-    },
-    "_id": "6eeJSVCIJNxrAznwaG/KP9"
-  },
-  {
     "__type__": "cc.Label",
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 44
+      "__id__": 38
     },
     "_enabled": true,
     "_materials": [
@@ -2108,8 +1928,8 @@
       }
     ],
     "_useOriginalSize": false,
-    "_string": "ATK",
-    "_N$string": "ATK",
+    "_string": "MP",
+    "_N$string": "MP",
     "_fontSize": 40,
     "_lineHeight": 40,
     "_enableWrapText": true,
@@ -2122,7 +1942,7 @@
     "_N$fontFamily": "Arial",
     "_N$overflow": 0,
     "_N$cacheMode": 0,
-    "_id": "8eF49tBp9IQq0r8rOcQ5Jq"
+    "_id": "ff/UphL7JHWIXAXkGopD0u"
   },
   {
     "__type__": "cc.Node",
@@ -2136,10 +1956,7 @@
     "_level": 1,
     "_components": [
       {
-        "__id__": 43
-      },
-      {
-        "__id__": 45
+        "__id__": 41
       }
     ],
     "_prefab": null,
@@ -2186,57 +2003,11 @@
     "_id": "71a+Vm5lpGprlmYbO5I85e"
   },
   {
-    "__type__": "99b459YUgtMnq0vcvZ+MQmc",
-    "_name": "",
-    "_objFlags": 0,
-    "node": {
-      "__id__": 44
-    },
-    "_enabled": true,
-    "playerHpLabel": {
-      "__id__": 37
-    },
-    "playerMpLabel": {
-      "__id__": 40
-    },
-    "playerAtkLabel": {
-      "__id__": 43
-    },
-    "playerDefLabel": {
-      "__id__": 46
-    },
-    "enemyHpLabel": {
-      "__id__": 49
-    },
-    "enemyMpLabel": {
-      "__id__": 52
-    },
-    "enemyAtkLabel": {
-      "__id__": 55
-    },
-    "enemyDefLabel": {
-      "__id__": 58
-    },
-    "messageLabel": {
-      "__id__": 35
-    },
-    "attackBtn": {
-      "__id__": 19
-    },
-    "skillBtn": {
-      "__id__": 26
-    },
-    "recoverBtn": {
-      "__id__": 33
-    },
-    "_id": "ffw4EmRsBD64BBAstSekFT"
-  },
-  {
     "__type__": "cc.Label",
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 47
+      "__id__": 40
     },
     "_enabled": true,
     "_materials": [
@@ -2245,8 +2016,8 @@
       }
     ],
     "_useOriginalSize": false,
-    "_string": "DEF",
-    "_N$string": "DEF",
+    "_string": "ATK",
+    "_N$string": "ATK",
     "_fontSize": 40,
     "_lineHeight": 40,
     "_enableWrapText": true,
@@ -2259,7 +2030,7 @@
     "_N$fontFamily": "Arial",
     "_N$overflow": 0,
     "_N$cacheMode": 0,
-    "_id": "7fFT+ymEZH65mY/09VPAg3"
+    "_id": "8eF49tBp9IQq0r8rOcQ5Jq"
   },
   {
     "__type__": "cc.Node",
@@ -2273,10 +2044,7 @@
     "_level": 1,
     "_components": [
       {
-        "__id__": 46
-      },
-      {
-        "__id__": 48
+        "__id__": 43
       }
     ],
     "_prefab": null,
@@ -2323,57 +2091,11 @@
     "_id": "a0ycXRcEpEmpOxcvZpTC8x"
   },
   {
-    "__type__": "99b459YUgtMnq0vcvZ+MQmc",
-    "_name": "",
-    "_objFlags": 0,
-    "node": {
-      "__id__": 47
-    },
-    "_enabled": true,
-    "playerHpLabel": {
-      "__id__": 37
-    },
-    "playerMpLabel": {
-      "__id__": 40
-    },
-    "playerAtkLabel": {
-      "__id__": 43
-    },
-    "playerDefLabel": {
-      "__id__": 46
-    },
-    "enemyHpLabel": {
-      "__id__": 49
-    },
-    "enemyMpLabel": {
-      "__id__": 52
-    },
-    "enemyAtkLabel": {
-      "__id__": 55
-    },
-    "enemyDefLabel": {
-      "__id__": 58
-    },
-    "messageLabel": {
-      "__id__": 35
-    },
-    "attackBtn": {
-      "__id__": 19
-    },
-    "skillBtn": {
-      "__id__": 26
-    },
-    "recoverBtn": {
-      "__id__": 33
-    },
-    "_id": "7aXMKbFSJLDpYF6uwSVw/e"
-  },
-  {
     "__type__": "cc.Label",
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 50
+      "__id__": 42
     },
     "_enabled": true,
     "_materials": [
@@ -2382,8 +2104,8 @@
       }
     ],
     "_useOriginalSize": false,
-    "_string": "HP",
-    "_N$string": "HP",
+    "_string": "DEF",
+    "_N$string": "DEF",
     "_fontSize": 40,
     "_lineHeight": 40,
     "_enableWrapText": true,
@@ -2396,7 +2118,7 @@
     "_N$fontFamily": "Arial",
     "_N$overflow": 0,
     "_N$cacheMode": 0,
-    "_id": "1aKw7u5a9BVYumoormAvEv"
+    "_id": "7fFT+ymEZH65mY/09VPAg3"
   },
   {
     "__type__": "cc.Node",
@@ -2410,10 +2132,7 @@
     "_level": 1,
     "_components": [
       {
-        "__id__": 49
-      },
-      {
-        "__id__": 51
+        "__id__": 45
       }
     ],
     "_prefab": null,
@@ -2460,57 +2179,11 @@
     "_id": "37GjuIu6JO16qj9/hMa2OY"
   },
   {
-    "__type__": "99b459YUgtMnq0vcvZ+MQmc",
-    "_name": "",
-    "_objFlags": 0,
-    "node": {
-      "__id__": 50
-    },
-    "_enabled": true,
-    "playerHpLabel": {
-      "__id__": 37
-    },
-    "playerMpLabel": {
-      "__id__": 40
-    },
-    "playerAtkLabel": {
-      "__id__": 43
-    },
-    "playerDefLabel": {
-      "__id__": 46
-    },
-    "enemyHpLabel": {
-      "__id__": 49
-    },
-    "enemyMpLabel": {
-      "__id__": 52
-    },
-    "enemyAtkLabel": {
-      "__id__": 55
-    },
-    "enemyDefLabel": {
-      "__id__": 58
-    },
-    "messageLabel": {
-      "__id__": 35
-    },
-    "attackBtn": {
-      "__id__": 19
-    },
-    "skillBtn": {
-      "__id__": 26
-    },
-    "recoverBtn": {
-      "__id__": 33
-    },
-    "_id": "81NPvnA1JFFrS9ZDNJHGVY"
-  },
-  {
     "__type__": "cc.Label",
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 53
+      "__id__": 44
     },
     "_enabled": true,
     "_materials": [
@@ -2519,8 +2192,8 @@
       }
     ],
     "_useOriginalSize": false,
-    "_string": "MP",
-    "_N$string": "MP",
+    "_string": "HP",
+    "_N$string": "HP",
     "_fontSize": 40,
     "_lineHeight": 40,
     "_enableWrapText": true,
@@ -2533,7 +2206,7 @@
     "_N$fontFamily": "Arial",
     "_N$overflow": 0,
     "_N$cacheMode": 0,
-    "_id": "7dpcm8AY5CR4pIh4bEHRc1"
+    "_id": "1aKw7u5a9BVYumoormAvEv"
   },
   {
     "__type__": "cc.Node",
@@ -2547,10 +2220,7 @@
     "_level": 1,
     "_components": [
       {
-        "__id__": 52
-      },
-      {
-        "__id__": 54
+        "__id__": 47
       }
     ],
     "_prefab": null,
@@ -2597,57 +2267,11 @@
     "_id": "e33sEvEX1Fb4yzdLMTSjQ7"
   },
   {
-    "__type__": "99b459YUgtMnq0vcvZ+MQmc",
-    "_name": "",
-    "_objFlags": 0,
-    "node": {
-      "__id__": 53
-    },
-    "_enabled": true,
-    "playerHpLabel": {
-      "__id__": 37
-    },
-    "playerMpLabel": {
-      "__id__": 40
-    },
-    "playerAtkLabel": {
-      "__id__": 43
-    },
-    "playerDefLabel": {
-      "__id__": 46
-    },
-    "enemyHpLabel": {
-      "__id__": 49
-    },
-    "enemyMpLabel": {
-      "__id__": 52
-    },
-    "enemyAtkLabel": {
-      "__id__": 55
-    },
-    "enemyDefLabel": {
-      "__id__": 58
-    },
-    "messageLabel": {
-      "__id__": 35
-    },
-    "attackBtn": {
-      "__id__": 19
-    },
-    "skillBtn": {
-      "__id__": 26
-    },
-    "recoverBtn": {
-      "__id__": 33
-    },
-    "_id": "1f/nsUXNJBwJodshO89+pp"
-  },
-  {
     "__type__": "cc.Label",
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 56
+      "__id__": 46
     },
     "_enabled": true,
     "_materials": [
@@ -2656,8 +2280,8 @@
       }
     ],
     "_useOriginalSize": false,
-    "_string": "ATK",
-    "_N$string": "ATK",
+    "_string": "MP",
+    "_N$string": "MP",
     "_fontSize": 40,
     "_lineHeight": 40,
     "_enableWrapText": true,
@@ -2670,7 +2294,7 @@
     "_N$fontFamily": "Arial",
     "_N$overflow": 0,
     "_N$cacheMode": 0,
-    "_id": "8c9ONwVqFOerwLdelstT60"
+    "_id": "7dpcm8AY5CR4pIh4bEHRc1"
   },
   {
     "__type__": "cc.Node",
@@ -2684,10 +2308,7 @@
     "_level": 1,
     "_components": [
       {
-        "__id__": 55
-      },
-      {
-        "__id__": 57
+        "__id__": 49
       }
     ],
     "_prefab": null,
@@ -2734,57 +2355,11 @@
     "_id": "e2Ee0WvMtMZ7mDp83vd0+k"
   },
   {
-    "__type__": "99b459YUgtMnq0vcvZ+MQmc",
-    "_name": "",
-    "_objFlags": 0,
-    "node": {
-      "__id__": 56
-    },
-    "_enabled": true,
-    "playerHpLabel": {
-      "__id__": 37
-    },
-    "playerMpLabel": {
-      "__id__": 40
-    },
-    "playerAtkLabel": {
-      "__id__": 43
-    },
-    "playerDefLabel": {
-      "__id__": 46
-    },
-    "enemyHpLabel": {
-      "__id__": 49
-    },
-    "enemyMpLabel": {
-      "__id__": 52
-    },
-    "enemyAtkLabel": {
-      "__id__": 55
-    },
-    "enemyDefLabel": {
-      "__id__": 58
-    },
-    "messageLabel": {
-      "__id__": 35
-    },
-    "attackBtn": {
-      "__id__": 19
-    },
-    "skillBtn": {
-      "__id__": 26
-    },
-    "recoverBtn": {
-      "__id__": 33
-    },
-    "_id": "c9+GuIdntPg4N5UyOKmuto"
-  },
-  {
     "__type__": "cc.Label",
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 59
+      "__id__": 48
     },
     "_enabled": true,
     "_materials": [
@@ -2793,8 +2368,8 @@
       }
     ],
     "_useOriginalSize": false,
-    "_string": "DEF",
-    "_N$string": "DEF",
+    "_string": "ATK",
+    "_N$string": "ATK",
     "_fontSize": 40,
     "_lineHeight": 40,
     "_enableWrapText": true,
@@ -2807,7 +2382,7 @@
     "_N$fontFamily": "Arial",
     "_N$overflow": 0,
     "_N$cacheMode": 0,
-    "_id": "a7FDtQOu1EF6oUASxyTlz5"
+    "_id": "8c9ONwVqFOerwLdelstT60"
   },
   {
     "__type__": "cc.Node",
@@ -2821,10 +2396,7 @@
     "_level": 1,
     "_components": [
       {
-        "__id__": 58
-      },
-      {
-        "__id__": 60
+        "__id__": 51
       }
     ],
     "_prefab": null,
@@ -2871,154 +2443,34 @@
     "_id": "a8Jft/8b9MMrnhMURuVI87"
   },
   {
-    "__type__": "99b459YUgtMnq0vcvZ+MQmc",
+    "__type__": "cc.Label",
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 59
+      "__id__": 50
     },
     "_enabled": true,
-    "playerHpLabel": {
-      "__id__": 37
-    },
-    "playerMpLabel": {
-      "__id__": 40
-    },
-    "playerAtkLabel": {
-      "__id__": 43
-    },
-    "playerDefLabel": {
-      "__id__": 46
-    },
-    "enemyHpLabel": {
-      "__id__": 49
-    },
-    "enemyMpLabel": {
-      "__id__": 52
-    },
-    "enemyAtkLabel": {
-      "__id__": 55
-    },
-    "enemyDefLabel": {
-      "__id__": 58
-    },
-    "messageLabel": {
-      "__id__": 35
-    },
-    "attackBtn": {
-      "__id__": 19
-    },
-    "skillBtn": {
-      "__id__": 26
-    },
-    "recoverBtn": {
-      "__id__": 33
-    },
-    "_id": "f40ITTCW5CLLZNutA/4dNA"
-  },
-  {
-    "__type__": "cc.Node",
-    "_name": "GameManager",
-    "_objFlags": 0,
-    "_parent": {
-      "__id__": 2
-    },
-    "_children": [],
-    "_active": true,
-    "_level": 1,
-    "_components": [
+    "_materials": [
       {
-        "__id__": 62
+        "__uuid__": "eca5d2f2-8ef6-41c2-bbe6-f9c79d09c432"
       }
     ],
-    "_prefab": null,
-    "_opacity": 255,
-    "_color": {
-      "__type__": "cc.Color",
-      "r": 255,
-      "g": 255,
-      "b": 255,
-      "a": 255
-    },
-    "_contentSize": {
-      "__type__": "cc.Size",
-      "width": 0,
-      "height": 0
-    },
-    "_anchorPoint": {
-      "__type__": "cc.Vec2",
-      "x": 0.5,
-      "y": 0.5
-    },
-    "_position": {
-      "__type__": "cc.Vec3",
-      "x": 0,
-      "y": 0,
-      "z": 0
-    },
-    "_scale": {
-      "__type__": "cc.Vec3",
-      "x": 1,
-      "y": 1,
-      "z": 1
-    },
-    "_eulerAngles": {
-      "__type__": "cc.Vec3",
-      "x": 0,
-      "y": 0,
-      "z": 0
-    },
-    "_skewX": 0,
-    "_skewY": 0,
-    "_is3DNode": false,
-    "groupIndex": 0,
-    "_id": "62mndcVphP+7c0hkvq4nB8"
-  },
-  {
-    "__type__": "99b459YUgtMnq0vcvZ+MQmc",
-    "_name": "",
-    "_objFlags": 0,
-    "node": {
-      "__id__": 61
-    },
-    "_enabled": true,
-    "playerHpLabel": {
-      "__id__": 37
-    },
-    "playerMpLabel": {
-      "__id__": 40
-    },
-    "playerAtkLabel": {
-      "__id__": 43
-    },
-    "playerDefLabel": {
-      "__id__": 46
-    },
-    "enemyHpLabel": {
-      "__id__": 49
-    },
-    "enemyMpLabel": {
-      "__id__": 52
-    },
-    "enemyAtkLabel": {
-      "__id__": 55
-    },
-    "enemyDefLabel": {
-      "__id__": 58
-    },
-    "messageLabel": {
-      "__id__": 35
-    },
-    "attackBtn": {
-      "__id__": 19
-    },
-    "skillBtn": {
-      "__id__": 26
-    },
-    "recoverBtn": {
-      "__id__": 33
-    },
-    "_id": "beeG4+/JtHqZ+P5K7Cv2PE"
+    "_useOriginalSize": false,
+    "_string": "DEF",
+    "_N$string": "DEF",
+    "_fontSize": 40,
+    "_lineHeight": 40,
+    "_enableWrapText": true,
+    "_N$file": null,
+    "_isSystemFontUsed": true,
+    "_spacingX": 0,
+    "_batchAsBitmap": false,
+    "_N$horizontalAlign": 1,
+    "_N$verticalAlign": 1,
+    "_N$fontFamily": "Arial",
+    "_N$overflow": 0,
+    "_N$cacheMode": 0,
+    "_id": "a7FDtQOu1EF6oUASxyTlz5"
   },
   {
     "__type__": "cc.Node",
@@ -3032,7 +2484,7 @@
     "_level": 1,
     "_components": [
       {
-        "__id__": 64
+        "__id__": 53
       }
     ],
     "_prefab": null,
@@ -3083,32 +2535,32 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 63
+      "__id__": 52
     },
     "_enabled": true,
     "playerHpLabel": {
       "__id__": 37
     },
     "playerMpLabel": {
-      "__id__": 40
+      "__id__": 39
     },
     "playerAtkLabel": {
-      "__id__": 43
+      "__id__": 41
     },
     "playerDefLabel": {
-      "__id__": 46
+      "__id__": 43
     },
     "enemyHpLabel": {
-      "__id__": 49
+      "__id__": 45
     },
     "enemyMpLabel": {
-      "__id__": 52
+      "__id__": 47
     },
     "enemyAtkLabel": {
-      "__id__": 55
+      "__id__": 49
     },
     "enemyDefLabel": {
-      "__id__": 58
+      "__id__": 51
     },
     "messageLabel": {
       "__id__": 35

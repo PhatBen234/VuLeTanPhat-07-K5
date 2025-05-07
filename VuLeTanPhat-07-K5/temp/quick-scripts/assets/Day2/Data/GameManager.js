@@ -1,5 +1,5 @@
 (function() {"use strict";var __module = CC_EDITOR ? module : {exports:{}};var __filename = 'preview-scripts/assets/Day2/Data/GameManager.js';var __require = CC_EDITOR ? function (request) {return cc.require(request, require);} : function (request) {return cc.require(request, __filename);};function __define (exports, require, module) {"use strict";
-cc._RF.push(module, 'a04c3sQGVBOKLPRhrvMfkao', 'GameManager', __filename);
+cc._RF.push(module, 'd20d0HsExFECogTZlT4U5ae', 'GameManager', __filename);
 // Day2/Data/GameManager.js
 
 "use strict";

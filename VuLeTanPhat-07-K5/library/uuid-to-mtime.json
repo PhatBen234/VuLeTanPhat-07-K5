@@ -420,203 +420,203 @@
     "relativePath": "model\\primitives.fbx"
   },
   "fcab3f0a-578b-492a-ac06-b90b303768de": {
-    "asset": 1746621608788,
-    "meta": 1746621608775,
+    "asset": 1746621972992,
+    "meta": 1746621972980,
     "relativePath": "Day1"
   },
   "b8642210-b45c-48a9-a6cc-f7fbf4dcb2f7": {
-    "asset": 1746621608777,
-    "meta": 1746621608777,
+    "asset": 1746621972981,
+    "meta": 1746621972980,
     "relativePath": "Day1\\Bai10"
   },
   "71a3f98e-e3e6-4702-897a-c37cb9e75f8f": {
-    "asset": 1746621608777,
-    "meta": 1746621608777,
+    "asset": 1746621972982,
+    "meta": 1746621972981,
     "relativePath": "Day1\\Bai10\\Data"
   },
   "9928cb30-e164-4b26-b8d7-6c68468d0b21": {
-    "asset": 1746621608779,
-    "meta": 1746621608777,
+    "asset": 1746621972983,
+    "meta": 1746621972982,
     "relativePath": "Day1\\Bai11"
   },
   "aa189d93-b009-40f8-803e-f97911f88bc0": {
-    "asset": 1746621608777,
-    "meta": 1746621750291,
+    "asset": 1746621972981,
+    "meta": 1746624493939,
     "relativePath": "Day1\\Bai10\\Data\\LevelChecker.js"
   },
   "521e9103-74af-4651-af25-7623a12ae4b6": {
-    "asset": 1746621608779,
-    "meta": 1746621608779,
+    "asset": 1746621972983,
+    "meta": 1746621972982,
     "relativePath": "Day1\\Bai11\\Data"
   },
   "954970db-f943-44a3-be97-eb8d4fe26c2d": {
-    "asset": 1746621608781,
-    "meta": 1746621608781,
+    "asset": 1746621972984,
+    "meta": 1746621972983,
     "relativePath": "Day1\\Bai3"
   },
   "c09f287b-68c9-4ece-aa57-641e42affa2b": {
-    "asset": 1746621608779,
-    "meta": 1746621750362,
+    "asset": 1746621972983,
+    "meta": 1746624493974,
     "relativePath": "Day1\\Bai11\\Data\\AddItem.js"
   },
   "4fa365cc-271d-4470-a6f5-8fba60a997df": {
-    "asset": 1746621608781,
-    "meta": 1746621608781,
+    "asset": 1746621972985,
+    "meta": 1746621972984,
     "relativePath": "Day1\\Bai3\\Data"
   },
   "95fcc7d4-378d-4cf4-a5e1-d77481774c47": {
-    "asset": 1746621608784,
-    "meta": 1746621608782,
+    "asset": 1746621972986,
+    "meta": 1746621972985,
     "relativePath": "Day1\\Bai6"
   },
   "2e06f272-f331-40f6-b8bb-39899aa2f44f": {
-    "asset": 1746621608781,
-    "meta": 1746621750402,
+    "asset": 1746621972984,
+    "meta": 1746624494012,
     "relativePath": "Day1\\Bai3\\Data\\index.js"
   },
   "f3edac6b-bcf1-43a4-a7c5-71059d7a90b3": {
-    "asset": 1746621608784,
-    "meta": 1746621608784,
+    "asset": 1746621972987,
+    "meta": 1746621972986,
     "relativePath": "Day1\\Bai6\\Data"
   },
   "49f22a20-4f92-4466-86f2-b64a83d153ea": {
-    "asset": 1746621608784,
-    "meta": 1746621608784,
+    "asset": 1746621972988,
+    "meta": 1746621972987,
     "relativePath": "Day1\\Bai7"
   },
   "d122b8ba-322a-447d-b08d-e3c258b1d2d2": {
-    "asset": 1746621608784,
-    "meta": 1746621750443,
+    "asset": 1746621972987,
+    "meta": 1746624494042,
     "relativePath": "Day1\\Bai6\\Data\\index.js.js"
   },
   "26cb9781-8657-4f30-9cd4-9ff411260124": {
-    "asset": 1746621608786,
-    "meta": 1746621608784,
+    "asset": 1746622703877,
+    "meta": 1746621972988,
     "relativePath": "Day1\\Bai7\\Data"
   },
   "c8945a24-8361-4411-8843-6926c3d2b68f": {
-    "asset": 1746621608786,
-    "meta": 1746621608786,
+    "asset": 1746621972990,
+    "meta": 1746621972989,
     "relativePath": "Day1\\Bai8"
   },
   "ee028e04-bbc7-497f-a74e-fd32fbc8b279": {
-    "asset": 1746621608786,
-    "meta": 1746621750528,
+    "asset": 1746622703877,
+    "meta": 1746624494062,
     "relativePath": "Day1\\Bai7\\Data\\PowerCalculator.js"
   },
   "37fcab00-d0e9-4a69-9462-3df36cf9cb26": {
-    "asset": 1746621608786,
-    "meta": 1746621608786,
+    "asset": 1746621972990,
+    "meta": 1746621972990,
     "relativePath": "Day1\\Bai8\\Data"
   },
   "a013fe95-0309-4293-a858-49cf83ddb5a6": {
-    "asset": 1746621608788,
-    "meta": 1746621608788,
+    "asset": 1746621972991,
+    "meta": 1746621972991,
     "relativePath": "Day1\\Bai9"
   },
   "b03433cc-9395-4348-888c-a3b8ad35a011": {
-    "asset": 1746621608786,
-    "meta": 1746621750594,
+    "asset": 1746621972990,
+    "meta": 1746624494084,
     "relativePath": "Day1\\Bai8\\Data\\ScoreSystem.js"
   },
   "2a88cca6-d917-4652-a787-bea4226ba029": {
-    "asset": 1746621608788,
-    "meta": 1746621608788,
+    "asset": 1746621972992,
+    "meta": 1746621972991,
     "relativePath": "Day1\\Bai9\\Data"
   },
   "753da509-ab17-48aa-86f3-454b1033de10": {
-    "asset": 1746621608795,
-    "meta": 1746621608788,
+    "asset": 1746621972998,
+    "meta": 1746621972992,
     "relativePath": "Day1\\ScenceDay1"
   },
   "1f8d44bd-d7de-410b-94b7-db4841ef83c6": {
-    "asset": 1746621608788,
-    "meta": 1746621750644,
+    "asset": 1746621972992,
+    "meta": 1746624494112,
     "relativePath": "Day1\\Bai9\\Data\\CharacterState.js"
   },
   "f3face1b-6c5f-4149-ae03-dfaf2bb8b598": {
-    "asset": 1746621608791,
-    "meta": 1746621750689,
+    "asset": 1746621972993,
+    "meta": 1746624494143,
     "relativePath": "Day1\\ScenceDay1\\Bai10.fire"
   },
   "243109fc-407e-4e0f-b803-baae9e51213b": {
-    "asset": 1746621608791,
-    "meta": 1746621750695,
+    "asset": 1746621972994,
+    "meta": 1746624494155,
     "relativePath": "Day1\\ScenceDay1\\Bai11.fire"
   },
   "0f26d129-2196-4f90-bdd0-25c28d1613a4": {
-    "asset": 1746621608791,
-    "meta": 1746621750724,
+    "asset": 1746621972995,
+    "meta": 1746624494174,
     "relativePath": "Day1\\ScenceDay1\\Bai3.fire"
   },
   "5915ae62-9856-405f-906c-7d1d7958f552": {
-    "asset": 1746621608793,
-    "meta": 1746621750728,
+    "asset": 1746621972996,
+    "meta": 1746624494168,
     "relativePath": "Day1\\ScenceDay1\\Bai6.fire"
   },
   "caa48a59-ec77-469c-a131-bff857f22fe3": {
-    "asset": 1746621608793,
-    "meta": 1746621750752,
+    "asset": 1746621972997,
+    "meta": 1746624494182,
     "relativePath": "Day1\\ScenceDay1\\Bai7.fire"
   },
   "a0325c3a-d73d-4f07-955d-6080b4787c52": {
-    "asset": 1746621608795,
-    "meta": 1746621750764,
+    "asset": 1746621972997,
+    "meta": 1746624494185,
     "relativePath": "Day1\\ScenceDay1\\Bai8.fire"
   },
   "f160f373-821e-47ef-9db5-c35747b8421c": {
-    "asset": 1746621608829,
-    "meta": 1746621608795,
+    "asset": 1746621973002,
+    "meta": 1746621972999,
     "relativePath": "Day2"
   },
   "72e87f6a-87c3-42f1-a5ef-671221c58ea5": {
-    "asset": 1746621608825,
-    "meta": 1746621608797,
+    "asset": 1746622703878,
+    "meta": 1746621972999,
     "relativePath": "Day2\\Bai1"
   },
   "9c43dfc1-b6de-4f8b-a1e3-c5094c23d972": {
-    "asset": 1746621608795,
-    "meta": 1746621750772,
+    "asset": 1746621972998,
+    "meta": 1746624494268,
     "relativePath": "Day1\\ScenceDay1\\Bai9.fire"
   },
-  "f508a47d-09ee-405d-821e-1aab18b6ef2d": {
-    "asset": 1746621608825,
-    "meta": 1746621608797,
-    "relativePath": "Day2\\Bai1\\Data"
-  },
-  "77b0034e-1ee2-4390-89ea-50d30aeefbdd": {
-    "asset": 1746621608825,
-    "meta": 1746621750935,
-    "relativePath": "Day2\\Bai1\\Data\\GameManager.js"
-  },
   "afe26bc8-8017-4b86-8a7c-1ddbd7b8aa10": {
-    "asset": 1746621608830,
-    "meta": 1746621608825,
+    "asset": 1746622703879,
+    "meta": 1746621973002,
     "relativePath": "Day2\\Data"
   },
-  "cef8dd90-0e91-41f8-8b9c-a055d94e3c06": {
-    "asset": 1746621608797,
-    "meta": 1746621751081,
-    "relativePath": "Day2\\Bai1\\Bai1.fire"
-  },
-  "a04c3b10-1950-4e28-b3d1-86bbcc7e46a8": {
-    "asset": 1746621608830,
-    "meta": 1746621751082,
-    "relativePath": "Day2\\Data\\GameManager.js"
-  },
   "e51a7997-ea28-4ca3-a7a9-3ff600995b11": {
-    "asset": 1746621608834,
-    "meta": 1746621608832,
+    "asset": 1746622703880,
+    "meta": 1746621973003,
     "relativePath": "resources"
   },
-  "456ed819-8a8f-4e4d-a571-972149964efd": {
-    "asset": 1746621608834,
-    "meta": 1746621751139,
+  "3da34a73-a1c3-4527-9868-e1db9ed70219": {
+    "asset": 1746626041354,
+    "meta": 1746626041383,
+    "relativePath": "Day2\\Bai1\\Bai1.fire"
+  },
+  "95be5bd5-0234-4fca-ac37-f509db41fef0": {
+    "asset": 1746622703878,
+    "meta": 1746622703878,
+    "relativePath": "Day2\\Bai1\\Data"
+  },
+  "d20d01ec-1311-440a-8813-6654f853969e": {
+    "asset": 1746621973002,
+    "meta": 1746624494358,
+    "relativePath": "Day2\\Data\\GameManager.js"
+  },
+  "fe474da5-928a-4f0a-969f-0e0a3aaff29b": {
+    "asset": 1746621973005,
+    "meta": 1746624494707,
     "relativePath": "resources\\player.png"
   },
-  "77576c5e-0883-4773-896b-ab39ddbc9cbf": {
-    "asset": 1746621608832,
-    "meta": 1746621751155,
+  "517ff956-446d-4e4e-a74f-a586ba12a4bc": {
+    "asset": 1746621973004,
+    "meta": 1746624494724,
     "relativePath": "resources\\enemy.png"
+  },
+  "99b45f58-520b-4c9e-ad2f-72f67e31099c": {
+    "asset": 1746626357590,
+    "meta": 1746626360102,
+    "relativePath": "Day2\\Bai1\\Data\\GameManager.js"
   }
 }

@@ -14,7 +14,7 @@ cc.Class({
     enemyAtkLabel: cc.Label,
     enemyDefLabel: cc.Label,
 
-    // Message for Game Over or Not enough mana
+    // Message display
     messageLabel: cc.Label,
 
     // Buttons
@@ -24,21 +24,28 @@ cc.Class({
   },
 
   onLoad() {
+    this.initCharacters();
+    this.updateUI();
+    this.setupButtonEvents();
+  },
+
+  initCharacters() {
     this.player = {
       health: 100,
       energy: 50,
       attack: this.randomInRange(10, 20),
       defense: this.randomInRange(5, 15),
     };
+
     this.enemy = {
       health: 100,
       energy: 50,
       attack: this.randomInRange(10, 20),
       defense: this.randomInRange(5, 15),
     };
+  },
 
-    this.updateUI();
-
+  setupButtonEvents() {
     this.attackBtn.node.on("click", this.onAttack, this);
     this.skillBtn.node.on("click", this.onSkill, this);
     this.recoverBtn.node.on("click", this.onRecover, this);
@@ -65,9 +72,10 @@ cc.Class({
 
     const damage = Math.max(0, this.player.attack - this.enemy.defense);
     this.enemy.health -= damage;
-    this.updateUI();
 
+    this.updateUI();
     this.checkGameOver();
+
     if (!this.isGameOver()) this.scheduleOnce(this.enemyTurn, 1);
   },
 
@@ -78,9 +86,10 @@ cc.Class({
       this.player.energy -= 30;
       const damage = Math.max(0, this.player.attack * 2 - this.enemy.defense);
       this.enemy.health -= damage;
-      this.updateUI();
 
+      this.updateUI();
       this.checkGameOver();
+
       if (!this.isGameOver()) this.scheduleOnce(this.enemyTurn, 1);
     } else {
       this.messageLabel.string = "❌ Not enough energy!";
@@ -94,8 +103,8 @@ cc.Class({
     if (this.isGameOver()) return;
 
     this.player.energy = Math.min(100, this.player.energy + 20);
-    this.updateUI();
 
+    this.updateUI();
     this.scheduleOnce(this.enemyTurn, 1);
   },
 
@@ -104,6 +113,7 @@ cc.Class({
 
     const damage = Math.max(0, this.enemy.attack - this.player.defense);
     this.player.health -= damage;
+
     this.updateUI();
     this.checkGameOver();
   },
