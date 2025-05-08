@@ -1,0 +1,18 @@
+[
+  {
+    "id": 1,
+    "name": "Potion",
+    "quantity": 3,
+    "type": "consumable",
+    "effect": "Hồi 20 máu",
+    "icon": "icon_potion"
+  },
+  {
+    "id": 2,
+    "name": "Sword",
+    "quantity": 1,
+    "type": "equipment",
+    "effect": "Tăng 10 sức mạnh",
+    "icon": "icon_sword"
+  }
+]
