@@ -71,6 +71,8 @@ cc.Class({
 
   onTargetClicked(point) {
     // Gọi hàm tính điểm khi mục tiêu bị click
+    console.log(point);
+
     this.calculateScore(point);
   },
 

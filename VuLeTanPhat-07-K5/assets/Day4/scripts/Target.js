@@ -37,7 +37,21 @@ cc.Class({
     console.log("[Target] Clicked, điểm:", this.point);
 
     // Phát sự kiện "target-clicked" với điểm số của mục tiêu
-    this.node.emit("target-clicked", this.point);
+    // this.node.emit("target-clicked", this.point);
+    console.log(this.node);
+    console.log(this.node.parent.getComponent("GameBalloon"));
+    console.log(this.node.parent.parent.getComponent("GameBalloon"));
+    console.log(this.node.parent.parent.children);
+    this.node.parent.parent.children.forEach((child) => {
+      if (child._name == "GameBalloon") {
+        child.emit("target-clicked", this.point);
+      }
+    });
+
+    // for (const child in this.node.parent.parent.children) {
+    //   console.log(child);
+    // }
+    // this.node.parent.parent.children[5].emit("target-clicked", this.point);
 
     // Huỷ mục tiêu khi người chơi click
     this.node.destroy();
