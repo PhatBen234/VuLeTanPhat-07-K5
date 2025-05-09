@@ -81,5 +81,12 @@
       ]
     }
   },
-  "panels": {}
+  "panels": {
+    "sprite-editor": {
+      "x": 470,
+      "y": 137,
+      "width": 500,
+      "height": 528
+    }
+  }
 }
