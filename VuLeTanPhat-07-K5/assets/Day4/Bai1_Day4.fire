@@ -75,13 +75,16 @@
       },
       {
         "__id__": 21
+      },
+      {
+        "__id__": 23
       }
     ],
     "_active": true,
     "_level": 1,
     "_components": [
       {
-        "__id__": 23
+        "__id__": 25
       }
     ],
     "_prefab": null,
@@ -165,7 +168,7 @@
       "__type__": "cc.Vec3",
       "x": 0,
       "y": 0,
-      "z": 352.8918203952246
+      "z": 222.40939958108714
     },
     "_scale": {
       "__type__": "cc.Vec3",
@@ -494,7 +497,7 @@
     "_position": {
       "__type__": "cc.Vec3",
       "x": 0,
-      "y": 222.608,
+      "y": 0,
       "z": 0
     },
     "_scale": {
@@ -1070,7 +1073,87 @@
     },
     "numSeconds": 60,
     "spawnInterval": 1,
+    "gamePanel": {
+      "__id__": 23
+    },
     "_id": "b5XYtF2IVOiby66zYoWEFT"
+  },
+  {
+    "__type__": "cc.Node",
+    "_name": "GamePanel",
+    "_objFlags": 0,
+    "_parent": {
+      "__id__": 2
+    },
+    "_children": [],
+    "_active": true,
+    "_level": 2,
+    "_components": [
+      {
+        "__id__": 24
+      }
+    ],
+    "_prefab": null,
+    "_opacity": 255,
+    "_color": {
+      "__type__": "cc.Color",
+      "r": 255,
+      "g": 255,
+      "b": 255,
+      "a": 255
+    },
+    "_contentSize": {
+      "__type__": "cc.Size",
+      "width": 0,
+      "height": 0
+    },
+    "_anchorPoint": {
+      "__type__": "cc.Vec2",
+      "x": 0.5,
+      "y": 0.5
+    },
+    "_position": {
+      "__type__": "cc.Vec3",
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "_scale": {
+      "__type__": "cc.Vec3",
+      "x": 1,
+      "y": 1,
+      "z": 1
+    },
+    "_eulerAngles": {
+      "__type__": "cc.Vec3",
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "_skewX": 0,
+    "_skewY": 0,
+    "_is3DNode": false,
+    "groupIndex": 0,
+    "_id": "8dbKe2yu1HDr6ZtB636J38"
+  },
+  {
+    "__type__": "5ede03VzXFMBJ6ttFX6d059",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 23
+    },
+    "_enabled": true,
+    "gameOverPanel": {
+      "__id__": 10
+    },
+    "finalScoreLabel": {
+      "__id__": 12
+    },
+    "restartButton": {
+      "__id__": 19
+    },
+    "_id": "30dJfS0RpPgYBwfzCgWs+5"
   },
   {
     "__type__": "cc.Canvas",

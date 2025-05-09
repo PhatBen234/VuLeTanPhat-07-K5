@@ -5,10 +5,10 @@
       "main": true,
       "url": "app://editor/index.html",
       "windowType": "dockable",
-      "x": 0,
-      "y": 39,
-      "width": 1728,
-      "height": 994,
+      "x": 128,
+      "y": 48,
+      "width": 1280,
+      "height": 720,
       "layout": {
         "children": [
           {
@@ -16,18 +16,18 @@
             "children": [
               "hierarchy"
             ],
-            "height": 906,
+            "height": 603.2000122070312,
             "type": "panel",
-            "width": 276
+            "width": 204.0625
           },
           {
             "active": 0,
             "children": [
               "assets"
             ],
-            "height": 906,
+            "height": 603.2000122070312,
             "type": "panel",
-            "width": 275
+            "width": 204.0625
           },
           {
             "children": [
@@ -36,9 +36,9 @@
                 "children": [
                   "scene"
                 ],
-                "height": 454,
+                "height": 302.6000061035156,
                 "type": "panel",
-                "width": 760
+                "width": 548.1749877929688
               },
               {
                 "active": 0,
@@ -47,14 +47,14 @@
                   "timeline",
                   "game-window"
                 ],
-                "height": 450,
+                "height": 298.6000061035156,
                 "type": "panel",
-                "width": 760
+                "width": 548.1749877929688
               }
             ],
-            "height": 906,
+            "height": 603.2000122070312,
             "type": "dock-v",
-            "width": 760
+            "width": 548.1749877929688
           },
           {
             "active": 0,
@@ -62,9 +62,9 @@
               "inspector",
               "cocos-services"
             ],
-            "height": 906,
+            "height": 603.2000122070312,
             "type": "panel",
-            "width": 411
+            "width": 304.1000061035156
           }
         ],
         "type": "dock-h"
@@ -83,16 +83,16 @@
   },
   "panels": {
     "sprite-editor": {
-      "x": 470,
-      "y": 137,
-      "width": 500,
-      "height": 528
+      "x": 508,
+      "y": 124,
+      "width": 516,
+      "height": 540
     },
-    "preferences": {
-      "x": 584,
-      "y": 234,
-      "width": 584,
-      "height": 554
+    "project-settings": {
+      "x": 468,
+      "y": 124,
+      "width": 601,
+      "height": 566
     }
   }
 }

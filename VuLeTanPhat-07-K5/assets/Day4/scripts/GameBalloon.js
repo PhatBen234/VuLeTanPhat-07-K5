@@ -8,6 +8,7 @@ cc.Class({
     timeLabel: cc.Label, // Label hiển thị thời gian còn lại
     numSeconds: 60, // Tổng thời gian chạy game
     spawnInterval: 1.0, // Thời gian giữa mỗi lần tạo bóng
+    gamePanel: cc.Node,
   },
 
   onLoad() {
@@ -43,11 +44,20 @@ cc.Class({
 
   updateTimer() {
     if (this.remainingTime > 0) {
-      this.remainingTime -= 1; // Giảm 1 giây mỗi lần gọi
-      this.updateTimerLabel(); // Cập nhật hiển thị thời gian
+      this.remainingTime -= 1;
+      this.updateTimerLabel();
     } else {
-      this.unschedule(this.updateTimer); // Dừng đếm ngược khi hết thời gian
+      this.unschedule(this.updateTimer);
       console.log("⏰ Hết giờ game!");
+      this.scoreLabel.node.active = false;
+      this.timeLabel.node.active = false;
+      // 👉 Gọi GamePanel để hiện điểm cuối
+      const panelComp = this.gamePanel.getComponent("GamePanel");
+      if (panelComp) {
+        panelComp.showGameOver(this.score);
+      } else {
+        console.error("❌ Không tìm thấy GamePanel component!");
+      }
     }
   },
 
