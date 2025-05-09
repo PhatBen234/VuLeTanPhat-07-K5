@@ -575,7 +575,7 @@
     "relativePath": "Day1\\ScenceDay1\\Bai9.fire"
   },
   "e51a7997-ea28-4ca3-a7a9-3ff600995b11": {
-    "asset": 1746802247533,
+    "asset": 1746805261722,
     "meta": 1746621973003,
     "relativePath": "resources"
   },
@@ -630,7 +630,7 @@
     "relativePath": "resources\\player"
   },
   "aa78f359-3e14-43cf-9d46-15415dfe91d9": {
-    "asset": 1746802247522,
+    "asset": 1746804804339,
     "meta": 1746796393282,
     "relativePath": "Day4"
   },
@@ -680,8 +680,8 @@
     "relativePath": "Day3\\Bai1\\Script\\ItemSlot.js"
   },
   "70ee0593-3d68-4183-948d-59d9c0269a23": {
-    "asset": 1746806757984,
-    "meta": 1746806758010,
+    "asset": 1746807571378,
+    "meta": 1746807571394,
     "relativePath": "Day4\\Bai1_Day4.fire"
   },
   "4c38e1b7-2ea5-4ca4-abad-1d561d686a0d": {
@@ -745,7 +745,7 @@
     "relativePath": "Day4\\scripts\\GameBalloon.js"
   },
   "b7bb226e-85fe-4e5c-bf85-0af622287198": {
-    "asset": 1746805261723,
+    "asset": 1746806617223,
     "meta": 1746805261723,
     "relativePath": "resources\\Background"
   },
