@@ -1,69 +1,116 @@
-2025-05-11T13:30:13.375Z - normal: Load ~/.CocosCreator/settings.json
-2025-05-11T13:30:14.746Z - normal: Initializing Asset Database
-2025-05-11T13:30:14.749Z - normal: checking language setting...
-2025-05-11T13:30:14.749Z - normal: Language: en
-2025-05-11T13:30:15.523Z - success: preview server running at http://localhost:7456
-2025-05-11T13:30:15.525Z - success: protocol editor-framework registered
-2025-05-11T13:30:15.525Z - success: protocol app registered
-2025-05-11T13:30:15.526Z - success: protocol theme registered
-2025-05-11T13:30:15.526Z - success: protocol packages registered
-2025-05-11T13:30:15.526Z - success: protocol uuid registerred
-2025-05-11T13:30:15.526Z - success: protocol db registerred
-2025-05-11T13:30:15.526Z - success: protocol thumbnail registerred
-2025-05-11T13:30:15.526Z - success: protocol unpack registerred
-2025-05-11T13:30:15.526Z - success: protocol disable-commonjs registerred
-2025-05-11T13:30:17.662Z - normal: connected!
-2025-05-11T13:30:17.663Z - normal: Check project E:\VuLeTanPhat-07-K5\VuLeTanPhat-07-K5
-2025-05-11T13:30:17.665Z - normal: Initializing project E:\VuLeTanPhat-07-K5\VuLeTanPhat-07-K5
-2025-05-11T13:30:18.067Z - normal: Initializing Cocos2d
-2025-05-11T13:30:18.883Z - normal: Initializing engine extends
-2025-05-11T13:30:18.902Z - success: alipay-adapter loaded
-2025-05-11T13:30:18.906Z - success: asset-db-debugger loaded
-2025-05-11T13:30:18.907Z - success: baidu-adapter loaded
-2025-05-11T13:30:18.907Z - success: color-picker loaded
-2025-05-11T13:30:19.034Z - success: fb-audience-network loaded
-2025-05-11T13:30:19.083Z - success: fb-live-stream loaded
-2025-05-11T13:30:19.088Z - success: google-play-instant loaded
-2025-05-11T13:30:19.095Z - success: huawei-runtime loaded
-2025-05-11T13:30:19.356Z - success: cpk-publish loaded
-2025-05-11T13:30:19.357Z - success: jsb-adapter loaded
-2025-05-11T13:30:19.364Z - success: oppo-runtime loaded
-2025-05-11T13:30:19.367Z - success: package-manager loaded
-2025-05-11T13:30:19.503Z - success: qqplay-adapter loaded
-2025-05-11T13:30:19.510Z - success: runtime-dev-tools loaded
-2025-05-11T13:30:19.519Z - success: sdkbox loaded
-2025-05-11T13:30:19.528Z - success: tester loaded
-2025-05-11T13:30:19.532Z - success: ui-kit-preview-extra loaded
-2025-05-11T13:30:19.536Z - success: ui-kit-preview loaded
-2025-05-11T13:30:19.542Z - success: ui-kit loaded
-2025-05-11T13:30:19.553Z - success: vivo-runtime loaded
-2025-05-11T13:30:19.557Z - success: weapp-adapter loaded
-2025-05-11T13:30:19.562Z - success: xiaomi-adapter loaded
-2025-05-11T13:30:19.574Z - success: alipay-minigame loaded
-2025-05-11T13:30:19.626Z - success: assets loaded
-2025-05-11T13:30:19.628Z - success: builder loaded
-2025-05-11T13:30:20.005Z - success: cocos-services loaded
-2025-05-11T13:30:20.017Z - success: console loaded
-2025-05-11T13:30:20.050Z - success: fb-instant-games loaded
-2025-05-11T13:30:20.053Z - success: game-window loaded
-2025-05-11T13:30:20.054Z - success: google-instant-games loaded
-2025-05-11T13:30:20.058Z - success: hierarchy loaded
-2025-05-11T13:30:20.060Z - success: inspector loaded
-2025-05-11T13:30:20.061Z - success: keystore loaded
-2025-05-11T13:30:20.065Z - success: node-library loaded
-2025-05-11T13:30:20.066Z - success: package-asset loaded
-2025-05-11T13:30:20.067Z - success: preferences loaded
-2025-05-11T13:30:20.069Z - success: project-exporter loaded
-2025-05-11T13:30:20.071Z - success: project-importer loaded
-2025-05-11T13:30:20.073Z - success: project-settings loaded
-2025-05-11T13:30:20.076Z - success: scene loaded
-2025-05-11T13:30:20.078Z - success: simulator-debugger loaded
-2025-05-11T13:30:20.079Z - success: sprite-editor loaded
-2025-05-11T13:30:20.082Z - success: store loaded
-2025-05-11T13:30:20.087Z - success: timeline loaded
-2025-05-11T13:30:20.091Z - success: xiaomi-runtime loaded
-2025-05-11T13:30:21.313Z - normal: Loading packages
-2025-05-11T13:30:21.319Z - normal: Watching packages
-2025-05-11T13:30:21.945Z - normal: Run Application
-2025-05-11T13:30:22.700Z - info: Cocos Services load base data!
-2025-05-11T13:46:40.326Z - info: Only the prefab node "Item" and its child nodes are saved.
+2025-05-11T13:58:59.165Z - normal: Load ~/.CocosCreator/settings.json
+2025-05-11T13:59:00.482Z - normal: Initializing Asset Database
+2025-05-11T13:59:00.485Z - normal: checking language setting...
+2025-05-11T13:59:00.486Z - normal: Language: en
+2025-05-11T13:59:01.518Z - success: preview server running at http://localhost:7456
+2025-05-11T13:59:01.521Z - success: protocol editor-framework registered
+2025-05-11T13:59:01.521Z - success: protocol app registered
+2025-05-11T13:59:01.521Z - success: protocol theme registered
+2025-05-11T13:59:01.522Z - success: protocol packages registered
+2025-05-11T13:59:01.522Z - success: protocol uuid registerred
+2025-05-11T13:59:01.522Z - success: protocol db registerred
+2025-05-11T13:59:01.522Z - success: protocol thumbnail registerred
+2025-05-11T13:59:01.522Z - success: protocol unpack registerred
+2025-05-11T13:59:01.522Z - success: protocol disable-commonjs registerred
+2025-05-11T13:59:02.574Z - normal: connected!
+2025-05-11T13:59:02.575Z - normal: Check project E:\VuLeTanPhat-07-K5\VuLeTanPhat-07-K5
+2025-05-11T13:59:02.578Z - normal: Initializing project E:\VuLeTanPhat-07-K5\VuLeTanPhat-07-K5
+2025-05-11T13:59:02.956Z - normal: Initializing Cocos2d
+2025-05-11T13:59:03.881Z - normal: Initializing engine extends
+2025-05-11T13:59:03.897Z - success: alipay-adapter loaded
+2025-05-11T13:59:03.900Z - success: asset-db-debugger loaded
+2025-05-11T13:59:03.901Z - success: baidu-adapter loaded
+2025-05-11T13:59:03.902Z - success: color-picker loaded
+2025-05-11T13:59:04.060Z - success: fb-audience-network loaded
+2025-05-11T13:59:04.153Z - success: fb-live-stream loaded
+2025-05-11T13:59:04.156Z - success: google-play-instant loaded
+2025-05-11T13:59:04.162Z - success: huawei-runtime loaded
+2025-05-11T13:59:04.393Z - success: cpk-publish loaded
+2025-05-11T13:59:04.394Z - success: jsb-adapter loaded
+2025-05-11T13:59:04.400Z - success: oppo-runtime loaded
+2025-05-11T13:59:04.403Z - success: package-manager loaded
+2025-05-11T13:59:04.537Z - success: qqplay-adapter loaded
+2025-05-11T13:59:04.539Z - success: runtime-dev-tools loaded
+2025-05-11T13:59:04.545Z - success: sdkbox loaded
+2025-05-11T13:59:04.549Z - success: tester loaded
+2025-05-11T13:59:04.552Z - success: ui-kit-preview-extra loaded
+2025-05-11T13:59:04.554Z - success: ui-kit-preview loaded
+2025-05-11T13:59:04.556Z - success: ui-kit loaded
+2025-05-11T13:59:04.563Z - success: vivo-runtime loaded
+2025-05-11T13:59:04.563Z - success: weapp-adapter loaded
+2025-05-11T13:59:04.564Z - success: xiaomi-adapter loaded
+2025-05-11T13:59:04.566Z - success: alipay-minigame loaded
+2025-05-11T13:59:04.641Z - success: assets loaded
+2025-05-11T13:59:04.643Z - success: builder loaded
+2025-05-11T13:59:04.921Z - success: cocos-services loaded
+2025-05-11T13:59:04.929Z - success: console loaded
+2025-05-11T13:59:04.973Z - success: fb-instant-games loaded
+2025-05-11T13:59:04.976Z - success: game-window loaded
+2025-05-11T13:59:04.981Z - success: google-instant-games loaded
+2025-05-11T13:59:04.989Z - success: hierarchy loaded
+2025-05-11T13:59:04.997Z - success: inspector loaded
+2025-05-11T13:59:05.000Z - success: keystore loaded
+2025-05-11T13:59:05.006Z - success: node-library loaded
+2025-05-11T13:59:05.009Z - success: package-asset loaded
+2025-05-11T13:59:05.013Z - success: preferences loaded
+2025-05-11T13:59:05.016Z - success: project-exporter loaded
+2025-05-11T13:59:05.022Z - success: project-importer loaded
+2025-05-11T13:59:05.031Z - success: project-settings loaded
+2025-05-11T13:59:05.044Z - success: scene loaded
+2025-05-11T13:59:05.045Z - success: simulator-debugger loaded
+2025-05-11T13:59:05.047Z - success: sprite-editor loaded
+2025-05-11T13:59:05.050Z - success: store loaded
+2025-05-11T13:59:05.055Z - success: timeline loaded
+2025-05-11T13:59:05.060Z - success: xiaomi-runtime loaded
+2025-05-11T13:59:06.282Z - normal: Loading packages
+2025-05-11T13:59:06.289Z - normal: Watching packages
+2025-05-11T13:59:06.810Z - normal: Run Application
+2025-05-11T13:59:09.190Z - info: Cocos Services load base data!
+2025-05-11T13:59:58.807Z - warn: The Asset used by node "Icon" in prefab "Item.prefab" is missing. Detailed information:
+Node path: "Item/Icon"
+Asset url: "db://assets/Day3/Bai1/Prefabs/Item.prefab"
+Missing uuid: "2fe11bd8-c955-4fcc-9755-158a82a58e1c"
+
+2025-05-11T13:59:58.807Z - warn: The Asset used by node "QuantityLabel" in prefab "Item.prefab" is missing. Detailed information:
+Node path: "Item/QuantityLabel"
+Asset url: "db://assets/Day3/Bai1/Prefabs/Item.prefab"
+Missing uuid: "2fe11bd8-c955-4fcc-9755-158a82a58e1c"
+
+2025-05-11T13:59:58.807Z - warn: The Asset used by node "Item" in prefab "Item.prefab" is missing. Detailed information:
+Node path: "Item/Item"
+Asset url: "db://assets/Day3/Bai1/Prefabs/Item.prefab"
+Missing uuid: "2fe11bd8-c955-4fcc-9755-158a82a58e1c"
+
+2025-05-11T13:59:58.807Z - warn: The Asset used by node "Item" in prefab "Item.prefab" is missing. Detailed information:
+Node path: "Item"
+Asset url: "db://assets/Day3/Bai1/Prefabs/Item.prefab"
+Missing uuid: "2fe11bd8-c955-4fcc-9755-158a82a58e1c"
+
+2025-05-11T13:59:58.837Z - warn: The Asset used by node "Icon" in prefab "Item.prefab" is missing. Detailed information:
+Node path: "Item/Icon"
+Asset url: "db://assets/Day3/Bai1/Prefabs/Item.prefab"
+Missing uuid: "2fe11bd8-c955-4fcc-9755-158a82a58e1c"
+
+2025-05-11T13:59:58.838Z - warn: The Asset used by node "QuantityLabel" in prefab "Item.prefab" is missing. Detailed information:
+Node path: "Item/QuantityLabel"
+Asset url: "db://assets/Day3/Bai1/Prefabs/Item.prefab"
+Missing uuid: "2fe11bd8-c955-4fcc-9755-158a82a58e1c"
+
+2025-05-11T13:59:58.838Z - warn: The Asset used by node "Item" in prefab "Item.prefab" is missing. Detailed information:
+Node path: "Item/Item"
+Asset url: "db://assets/Day3/Bai1/Prefabs/Item.prefab"
+Missing uuid: "2fe11bd8-c955-4fcc-9755-158a82a58e1c"
+
+2025-05-11T13:59:58.839Z - warn: The Asset used by node "Item" in prefab "Item.prefab" is missing. Detailed information:
+Node path: "Item"
+Asset url: "db://assets/Day3/Bai1/Prefabs/Item.prefab"
+Missing uuid: "2fe11bd8-c955-4fcc-9755-158a82a58e1c"
+
+2025-05-11T14:30:09.440Z - info: Only the prefab node "Item" and its child nodes are saved.
+2025-05-11T14:32:15.639Z - info: Only the prefab node "Item" and its child nodes are saved.
+2025-05-11T14:32:39.924Z - warn: The Asset used by component "Inventory" in scene "Bai1_Day3.fire" is missing. Detailed information:
+Node path: "Canvas/Inventory"
+Asset url: "db://assets/Day3/Bai1/Bai1_Day3.fire"
+Missing uuid: "2fe11bd8-c955-4fcc-9755-158a82a58e1c"
+
+2025-05-11T14:35:32.343Z - info: Only the prefab node "Item" and its child nodes are saved.

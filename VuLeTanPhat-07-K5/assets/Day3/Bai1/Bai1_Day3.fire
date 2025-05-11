@@ -17,7 +17,7 @@
         "__id__": 2
       }
     ],
-    "_active": true,
+    "_active": false,
     "_level": 0,
     "_components": [],
     "_prefab": null,
@@ -75,7 +75,7 @@
       }
     ],
     "_active": true,
-    "_level": 0,
+    "_level": 1,
     "_components": [
       {
         "__id__": 46
@@ -162,7 +162,7 @@
       "__type__": "cc.Vec3",
       "x": 0,
       "y": 0,
-      "z": 264.0728121063687
+      "z": 222.72765796411434
     },
     "_scale": {
       "__type__": "cc.Vec3",
@@ -518,7 +518,7 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 220,
+      "width": 300,
       "height": 326
     },
     "_anchorPoint": {
@@ -580,8 +580,8 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 240,
-      "height": 250
+      "width": 300,
+      "height": 300
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -642,7 +642,7 @@
     "_enabled": true,
     "_layoutSize": {
       "__type__": "cc.Size",
-      "width": 220,
+      "width": 300,
       "height": 326
     },
     "_resize": 1,
@@ -2023,7 +2023,7 @@
     },
     "_children": [],
     "_active": true,
-    "_level": 1,
+    "_level": 2,
     "_components": [
       {
         "__id__": 45
@@ -2070,21 +2070,24 @@
     "_skewY": 0,
     "_is3DNode": false,
     "groupIndex": 0,
-    "_id": "29Hm993r5PEaph4WGm/XO+"
+    "_id": "2ccVHq3iFMXqpyHXI6Dzm2"
   },
   {
-    "__type__": "52117T+KxlCGK+5MRNvjF79",
+    "__type__": "b9790SHdc5FfKwn6vgM/DPc",
     "_name": "",
     "_objFlags": 0,
     "node": {
       "__id__": 44
     },
     "_enabled": true,
-    "content": {
-      "__id__": 11
+    "holder": {
+      "__id__": 12
     },
     "itemPrefab": {
-      "__uuid__": "2fe11bd8-c955-4fcc-9755-158a82a58e1c"
+      "__uuid__": "860bd33d-75b7-4d32-b242-bf07bb66e12e"
+    },
+    "infoPanel": {
+      "__id__": 18
     },
     "iconList": [
       {
@@ -2094,25 +2097,7 @@
         "__uuid__": "82ba7b3a-d3cf-4701-b8b6-8db67d8f1e87"
       }
     ],
-    "nameLabel": {
-      "__id__": 20
-    },
-    "quantityLabel": {
-      "__id__": 22
-    },
-    "effectLabel": {
-      "__id__": 26
-    },
-    "equipStatusLabel": {
-      "__id__": 43
-    },
-    "useButton": {
-      "__id__": 33
-    },
-    "deleteButton": {
-      "__id__": 40
-    },
-    "_id": "021Ri9mgNOwqOlVwQdA4PH"
+    "_id": "922xNUlpRL257PU4TNCKy1"
   },
   {
     "__type__": "cc.Canvas",

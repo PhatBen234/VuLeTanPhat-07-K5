@@ -2,28 +2,31 @@ cc.Class({
   extends: cc.Component,
 
   properties: {
-    Icon: cc.Sprite,
-    QuantityLabel: cc.Label,
+    icon: cc.Sprite,
+    quantityLabel: cc.Label,
   },
 
   onLoad() {
-    this.node.on("INIT_DATA_NEW", this.initData, this);
+    this.node.on("INIT_ITEM_DATA", this.initItem, this);
   },
 
-  initData(data, mainClass) {
-    const { iconIndex, quantity } = data;
-    this.Icon.spriteFrame = mainClass.iconList[iconIndex];
+  initItem(itemData) {
+    this.data = itemData;
 
-    this.QuantityLabel.string = "x" + quantity;
-    this.data = data;
-    this.mainClass = mainClass;
+    // Hiển thị icon và số lượng
+    this.icon.spriteFrame = itemData.icon;
+    this.quantityLabel.string = `x${itemData.quantity}`;
+
+    console.log("Item prefab loaded with:", itemData.name);
   },
 
   onClick() {
-    this.mainClass.itemClick(this.data);
+    if (!this.data) return;
+    console.log("Item clicked:", this.data.name);
+    this.node.emit("ITEM_SELECTED", this.data); // Gửi toàn bộ thông tin item
   },
 
   onDestroy() {
-    this.node.off("INIT_DATA_NEW", this.initData, this);
+    this.node.off("INIT_ITEM_DATA", this.initItem, this);
   },
 });
