@@ -1,69 +1,69 @@
-2025-05-09T16:17:26.318Z - normal: Load ~/.CocosCreator/settings.json
-2025-05-09T16:17:27.695Z - normal: Initializing Asset Database
-2025-05-09T16:17:27.697Z - normal: checking language setting...
-2025-05-09T16:17:27.697Z - normal: Language: en
-2025-05-09T16:17:28.333Z - success: preview server running at http://localhost:7456
-2025-05-09T16:17:28.335Z - success: protocol editor-framework registered
-2025-05-09T16:17:28.335Z - success: protocol app registered
-2025-05-09T16:17:28.336Z - success: protocol theme registered
-2025-05-09T16:17:28.336Z - success: protocol packages registered
-2025-05-09T16:17:28.337Z - success: protocol uuid registerred
-2025-05-09T16:17:28.337Z - success: protocol db registerred
-2025-05-09T16:17:28.337Z - success: protocol thumbnail registerred
-2025-05-09T16:17:28.337Z - success: protocol unpack registerred
-2025-05-09T16:17:28.337Z - success: protocol disable-commonjs registerred
-2025-05-09T16:17:29.322Z - normal: connected!
-2025-05-09T16:17:29.323Z - normal: Check project E:\VuLeTanPhat-07-K5\VuLeTanPhat-07-K5
-2025-05-09T16:17:29.324Z - normal: Initializing project E:\VuLeTanPhat-07-K5\VuLeTanPhat-07-K5
-2025-05-09T16:17:29.672Z - normal: Initializing Cocos2d
-2025-05-09T16:17:30.503Z - normal: Initializing engine extends
-2025-05-09T16:17:30.530Z - success: alipay-adapter loaded
-2025-05-09T16:17:30.535Z - success: asset-db-debugger loaded
-2025-05-09T16:17:30.536Z - success: baidu-adapter loaded
-2025-05-09T16:17:30.537Z - success: color-picker loaded
-2025-05-09T16:17:30.720Z - success: fb-audience-network loaded
-2025-05-09T16:17:30.766Z - success: fb-live-stream loaded
-2025-05-09T16:17:30.769Z - success: google-play-instant loaded
-2025-05-09T16:17:30.784Z - success: huawei-runtime loaded
-2025-05-09T16:17:30.988Z - success: cpk-publish loaded
-2025-05-09T16:17:30.989Z - success: jsb-adapter loaded
-2025-05-09T16:17:31.004Z - success: oppo-runtime loaded
-2025-05-09T16:17:31.008Z - success: package-manager loaded
-2025-05-09T16:17:31.123Z - success: qqplay-adapter loaded
-2025-05-09T16:17:31.125Z - success: runtime-dev-tools loaded
-2025-05-09T16:17:31.128Z - success: sdkbox loaded
-2025-05-09T16:17:31.131Z - success: tester loaded
-2025-05-09T16:17:31.133Z - success: ui-kit-preview-extra loaded
-2025-05-09T16:17:31.135Z - success: ui-kit-preview loaded
-2025-05-09T16:17:31.136Z - success: ui-kit loaded
-2025-05-09T16:17:31.143Z - success: vivo-runtime loaded
-2025-05-09T16:17:31.143Z - success: weapp-adapter loaded
-2025-05-09T16:17:31.144Z - success: xiaomi-adapter loaded
-2025-05-09T16:17:31.147Z - success: alipay-minigame loaded
-2025-05-09T16:17:31.192Z - success: assets loaded
-2025-05-09T16:17:31.194Z - success: builder loaded
-2025-05-09T16:17:31.435Z - success: cocos-services loaded
-2025-05-09T16:17:31.438Z - success: console loaded
-2025-05-09T16:17:31.471Z - success: fb-instant-games loaded
-2025-05-09T16:17:31.473Z - success: game-window loaded
-2025-05-09T16:17:31.475Z - success: google-instant-games loaded
-2025-05-09T16:17:31.479Z - success: hierarchy loaded
-2025-05-09T16:17:31.481Z - success: inspector loaded
-2025-05-09T16:17:31.482Z - success: keystore loaded
-2025-05-09T16:17:31.485Z - success: node-library loaded
-2025-05-09T16:17:31.487Z - success: package-asset loaded
-2025-05-09T16:17:31.488Z - success: preferences loaded
-2025-05-09T16:17:31.489Z - success: project-exporter loaded
-2025-05-09T16:17:31.490Z - success: project-importer loaded
-2025-05-09T16:17:31.492Z - success: project-settings loaded
-2025-05-09T16:17:31.495Z - success: scene loaded
-2025-05-09T16:17:31.496Z - success: simulator-debugger loaded
-2025-05-09T16:17:31.497Z - success: sprite-editor loaded
-2025-05-09T16:17:31.499Z - success: store loaded
-2025-05-09T16:17:31.503Z - success: timeline loaded
-2025-05-09T16:17:31.507Z - success: xiaomi-runtime loaded
-2025-05-09T16:17:32.750Z - normal: Loading packages
-2025-05-09T16:17:32.756Z - normal: Watching packages
-2025-05-09T16:17:33.614Z - normal: Run Application
-2025-05-09T16:17:34.692Z - info: Cocos Services load base data!
-2025-05-09T16:19:33.047Z - info: shutdown preview server
+2025-05-11T13:30:13.375Z - normal: Load ~/.CocosCreator/settings.json
+2025-05-11T13:30:14.746Z - normal: Initializing Asset Database
+2025-05-11T13:30:14.749Z - normal: checking language setting...
+2025-05-11T13:30:14.749Z - normal: Language: en
+2025-05-11T13:30:15.523Z - success: preview server running at http://localhost:7456
+2025-05-11T13:30:15.525Z - success: protocol editor-framework registered
+2025-05-11T13:30:15.525Z - success: protocol app registered
+2025-05-11T13:30:15.526Z - success: protocol theme registered
+2025-05-11T13:30:15.526Z - success: protocol packages registered
+2025-05-11T13:30:15.526Z - success: protocol uuid registerred
+2025-05-11T13:30:15.526Z - success: protocol db registerred
+2025-05-11T13:30:15.526Z - success: protocol thumbnail registerred
+2025-05-11T13:30:15.526Z - success: protocol unpack registerred
+2025-05-11T13:30:15.526Z - success: protocol disable-commonjs registerred
+2025-05-11T13:30:17.662Z - normal: connected!
+2025-05-11T13:30:17.663Z - normal: Check project E:\VuLeTanPhat-07-K5\VuLeTanPhat-07-K5
+2025-05-11T13:30:17.665Z - normal: Initializing project E:\VuLeTanPhat-07-K5\VuLeTanPhat-07-K5
+2025-05-11T13:30:18.067Z - normal: Initializing Cocos2d
+2025-05-11T13:30:18.883Z - normal: Initializing engine extends
+2025-05-11T13:30:18.902Z - success: alipay-adapter loaded
+2025-05-11T13:30:18.906Z - success: asset-db-debugger loaded
+2025-05-11T13:30:18.907Z - success: baidu-adapter loaded
+2025-05-11T13:30:18.907Z - success: color-picker loaded
+2025-05-11T13:30:19.034Z - success: fb-audience-network loaded
+2025-05-11T13:30:19.083Z - success: fb-live-stream loaded
+2025-05-11T13:30:19.088Z - success: google-play-instant loaded
+2025-05-11T13:30:19.095Z - success: huawei-runtime loaded
+2025-05-11T13:30:19.356Z - success: cpk-publish loaded
+2025-05-11T13:30:19.357Z - success: jsb-adapter loaded
+2025-05-11T13:30:19.364Z - success: oppo-runtime loaded
+2025-05-11T13:30:19.367Z - success: package-manager loaded
+2025-05-11T13:30:19.503Z - success: qqplay-adapter loaded
+2025-05-11T13:30:19.510Z - success: runtime-dev-tools loaded
+2025-05-11T13:30:19.519Z - success: sdkbox loaded
+2025-05-11T13:30:19.528Z - success: tester loaded
+2025-05-11T13:30:19.532Z - success: ui-kit-preview-extra loaded
+2025-05-11T13:30:19.536Z - success: ui-kit-preview loaded
+2025-05-11T13:30:19.542Z - success: ui-kit loaded
+2025-05-11T13:30:19.553Z - success: vivo-runtime loaded
+2025-05-11T13:30:19.557Z - success: weapp-adapter loaded
+2025-05-11T13:30:19.562Z - success: xiaomi-adapter loaded
+2025-05-11T13:30:19.574Z - success: alipay-minigame loaded
+2025-05-11T13:30:19.626Z - success: assets loaded
+2025-05-11T13:30:19.628Z - success: builder loaded
+2025-05-11T13:30:20.005Z - success: cocos-services loaded
+2025-05-11T13:30:20.017Z - success: console loaded
+2025-05-11T13:30:20.050Z - success: fb-instant-games loaded
+2025-05-11T13:30:20.053Z - success: game-window loaded
+2025-05-11T13:30:20.054Z - success: google-instant-games loaded
+2025-05-11T13:30:20.058Z - success: hierarchy loaded
+2025-05-11T13:30:20.060Z - success: inspector loaded
+2025-05-11T13:30:20.061Z - success: keystore loaded
+2025-05-11T13:30:20.065Z - success: node-library loaded
+2025-05-11T13:30:20.066Z - success: package-asset loaded
+2025-05-11T13:30:20.067Z - success: preferences loaded
+2025-05-11T13:30:20.069Z - success: project-exporter loaded
+2025-05-11T13:30:20.071Z - success: project-importer loaded
+2025-05-11T13:30:20.073Z - success: project-settings loaded
+2025-05-11T13:30:20.076Z - success: scene loaded
+2025-05-11T13:30:20.078Z - success: simulator-debugger loaded
+2025-05-11T13:30:20.079Z - success: sprite-editor loaded
+2025-05-11T13:30:20.082Z - success: store loaded
+2025-05-11T13:30:20.087Z - success: timeline loaded
+2025-05-11T13:30:20.091Z - success: xiaomi-runtime loaded
+2025-05-11T13:30:21.313Z - normal: Loading packages
+2025-05-11T13:30:21.319Z - normal: Watching packages
+2025-05-11T13:30:21.945Z - normal: Run Application
+2025-05-11T13:30:22.700Z - info: Cocos Services load base data!
+2025-05-11T13:46:40.326Z - info: Only the prefab node "Item" and its child nodes are saved.
