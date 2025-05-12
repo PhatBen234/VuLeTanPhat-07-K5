@@ -2,10 +2,11 @@ cc.Class({
   extends: cc.Component,
 
   properties: {
+    managerNode: cc.Node, // node chứa InventoryManager script
     holder: cc.Node,
     itemPrefab: cc.Prefab,
 
-    // Hiển thị chi tiết item
+    // UI detail
     previewIcon: cc.Sprite,
     nameLabel: cc.Label,
     quantityLabel: cc.Label,
@@ -15,11 +16,7 @@ cc.Class({
     deleteButton: cc.Button,
     equipStatusLabel: cc.Label,
 
-    // Icon mẫu
-    healing_icon: cc.SpriteFrame,
-    sword_icon: cc.SpriteFrame,
-
-    // Add Item Form
+    // Add Form
     addItemForm: cc.Node,
     addItemToggleButton: cc.Button,
     addItemButton: cc.Button,
@@ -31,25 +28,7 @@ cc.Class({
   },
 
   onLoad() {
-    this.itemConfigs = [
-      {
-        key: "healing_potion",
-        name: "Bình máu nhỏ",
-        quantity: 5,
-        type: "consumable",
-        effect: "Hồi 20 máu",
-        icon: this.healing_icon,
-      },
-      {
-        key: "sword",
-        name: "Kiếm Sắt",
-        quantity: 1,
-        type: "equipment",
-        effect: "Tăng 10 sức mạnh",
-        icon: this.sword_icon,
-      },
-    ];
-
+    this.manager = this.managerNode.getComponent("InventoryManager");
     this.itemList = {};
     this.selectedItem = null;
 
@@ -57,30 +36,35 @@ cc.Class({
     this.deleteButton.node.on("click", this.onDeleteItem, this);
     this.addItemToggleButton.node.on("click", this.toggleAddItemForm, this);
     this.addItemButton.node.on("click", this.onAddNewItem, this);
+
+    this.manager.loadInitialItems();
   },
 
   start() {
     this.equipStatusLabel.node.opacity = 0;
-    this.spawnItems();
     this.hideItemDetails();
+    this.spawnAllItems();
     this.addItemForm.active = false;
   },
 
-  spawnItems() {
-    for (let itemData of this.itemConfigs) {
-      const itemNode = cc.instantiate(this.itemPrefab);
-      itemNode.parent = this.holder;
-
-      const itemScript = itemNode.getComponent("Item");
-      if (itemScript) {
-        itemScript.initItem(itemData, this);
-      }
-
-      this.itemList[itemData.key] = {
-        node: itemNode,
-        script: itemScript,
-      };
+  spawnAllItems() {
+    const items = this.manager.getAllItems();
+    for (let itemData of items) {
+      this.spawnItem(itemData);
     }
+  },
+
+  spawnItem(itemData) {
+    const itemNode = cc.instantiate(this.itemPrefab);
+    itemNode.parent = this.holder;
+
+    const itemScript = itemNode.getComponent("Item");
+    itemScript.initItem(itemData, this);
+
+    this.itemList[itemData.key] = {
+      node: itemNode,
+      script: itemScript,
+    };
   },
 
   onItemClick(itemData) {
@@ -104,45 +88,39 @@ cc.Class({
   onUseItem() {
     if (!this.selectedItem) return;
 
-    const item = this.selectedItem;
+    const key = this.selectedItem.key;
+    const result = this.manager.useItem(key);
 
-    if (item.type === "consumable") {
-      item.quantity--;
-      if (item.quantity <= 0) {
-        this.removeItem(item.key);
-      } else {
-        this.quantityLabel.string = `Số lượng: ${item.quantity}`;
-        const entry = this.itemList[item.key];
-        if (entry && entry.script) {
-          entry.script.updateQuantity(item.quantity);
-        }
-      }
-    } else if (item.type === "equipment") {
-      this.removeItem(item.key);
-      this.showEquipStatus(`Đã trang bị: ${item.name}`);
+    if (!result) return;
+
+    if (result.removed) {
+      this.removeItemUI(key);
+    } else {
+      this.selectedItem.quantity = result.item.quantity;
+      this.quantityLabel.string = `Số lượng: ${result.item.quantity}`;
+      this.itemList[key].script.updateQuantity(result.item.quantity);
+    }
+
+    if (result.equipped) {
+      this.showEquipStatus(`Đã trang bị: ${result.item.name}`);
     }
   },
 
   onDeleteItem() {
     if (!this.selectedItem) return;
-    this.removeItem(this.selectedItem.key);
+    const key = this.selectedItem.key;
+
+    const deleted = this.manager.deleteItem(key);
+    if (deleted) {
+      this.removeItemUI(key);
+    }
   },
 
-  removeItem(key) {
+  removeItemUI(key) {
     const entry = this.itemList[key];
-    if (entry && entry.node) {
-      entry.node.destroy();
-    }
-
+    if (entry) entry.node.destroy();
     delete this.itemList[key];
     this.selectedItem = null;
-
-    this.previewIcon.spriteFrame = null;
-    this.nameLabel.string = "";
-    this.quantityLabel.string = "";
-    this.typeLabel.string = "";
-    this.effectLabel.string = "";
-
     this.hideItemDetails();
   },
 
@@ -201,33 +179,15 @@ cc.Class({
 
     const key = name.toLowerCase().replace(/\s+/g, "_");
 
-    if (this.itemList[key]) {
+    const newItem = { key, name, quantity, type, effect, icon };
+
+    const added = this.manager.addItem(newItem);
+    if (!added) {
       console.log("[AddItem] Item đã tồn tại:", key);
       return;
     }
 
-    const newItem = {
-      key,
-      name,
-      quantity,
-      type,
-      effect,
-      icon,
-    };
-
-    const itemNode = cc.instantiate(this.itemPrefab);
-    itemNode.parent = this.holder;
-
-    const itemScript = itemNode.getComponent("Item");
-    if (itemScript) {
-      itemScript.initItem(newItem, this);
-    }
-
-    this.itemList[key] = {
-      node: itemNode,
-      script: itemScript,
-    };
-
+    this.spawnItem(newItem);
     this.addItemForm.active = false;
   },
 });

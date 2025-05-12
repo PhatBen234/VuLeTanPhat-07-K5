@@ -1,101 +1,68 @@
-2025-05-12T06:52:10.938Z - normal: Load ~/.CocosCreator/settings.json
-2025-05-12T06:52:11.024Z - normal: Initializing Asset Database
-2025-05-12T06:52:11.032Z - normal: checking language setting...
-2025-05-12T06:52:11.034Z - normal: Language: en
-2025-05-12T06:52:12.028Z - success: preview server running at http://localhost:7456
-2025-05-12T06:52:12.070Z - success: protocol editor-framework registered
-2025-05-12T06:52:12.071Z - success: protocol app registered
-2025-05-12T06:52:12.071Z - success: protocol theme registered
-2025-05-12T06:52:12.071Z - success: protocol packages registered
-2025-05-12T06:52:12.071Z - success: protocol uuid registerred
-2025-05-12T06:52:12.072Z - success: protocol db registerred
-2025-05-12T06:52:12.072Z - success: protocol thumbnail registerred
-2025-05-12T06:52:12.072Z - success: protocol unpack registerred
-2025-05-12T06:52:12.072Z - success: protocol disable-commonjs registerred
-2025-05-12T06:52:13.063Z - normal: connected!
-2025-05-12T06:52:13.081Z - normal: Check project /Users/cocos-1/VuLeTanPhat-07-K5/VuLeTanPhat-07-K5
-2025-05-12T06:52:13.094Z - normal: Initializing project /Users/cocos-1/VuLeTanPhat-07-K5/VuLeTanPhat-07-K5
-2025-05-12T06:52:13.581Z - normal: Initializing Cocos2d
-2025-05-12T06:52:14.598Z - normal: Initializing engine extends
-2025-05-12T06:52:14.706Z - success: alipay-adapter loaded
-2025-05-12T06:52:14.725Z - success: asset-db-debugger loaded
-2025-05-12T06:52:14.726Z - success: baidu-adapter loaded
-2025-05-12T06:52:14.728Z - success: color-picker loaded
-2025-05-12T06:52:14.905Z - success: fb-audience-network loaded
-2025-05-12T06:52:14.964Z - success: fb-live-stream loaded
-2025-05-12T06:52:14.967Z - success: google-play-instant loaded
-2025-05-12T06:52:14.978Z - success: huawei-runtime loaded
-2025-05-12T06:52:15.269Z - success: cpk-publish loaded
-2025-05-12T06:52:15.270Z - success: jsb-adapter loaded
-2025-05-12T06:52:15.274Z - success: oppo-runtime loaded
-2025-05-12T06:52:15.284Z - success: package-manager loaded
-2025-05-12T06:52:15.428Z - success: qqplay-adapter loaded
-2025-05-12T06:52:15.429Z - success: runtime-dev-tools loaded
-2025-05-12T06:52:15.438Z - success: sdkbox loaded
-2025-05-12T06:52:15.443Z - success: tester loaded
-2025-05-12T06:52:15.447Z - success: ui-kit-preview-extra loaded
-2025-05-12T06:52:15.449Z - success: ui-kit-preview loaded
-2025-05-12T06:52:15.453Z - success: ui-kit loaded
-2025-05-12T06:52:15.459Z - success: vivo-runtime loaded
-2025-05-12T06:52:15.459Z - success: weapp-adapter loaded
-2025-05-12T06:52:15.460Z - success: xiaomi-adapter loaded
-2025-05-12T06:52:15.463Z - success: alipay-minigame loaded
-2025-05-12T06:52:15.489Z - success: assets loaded
-2025-05-12T06:52:15.494Z - success: builder loaded
-2025-05-12T06:52:15.876Z - success: cocos-services loaded
-2025-05-12T06:52:15.889Z - success: console loaded
-2025-05-12T06:52:15.940Z - success: fb-instant-games loaded
-2025-05-12T06:52:15.946Z - success: game-window loaded
-2025-05-12T06:52:15.948Z - success: google-instant-games loaded
-2025-05-12T06:52:15.953Z - success: hierarchy loaded
-2025-05-12T06:52:15.957Z - success: inspector loaded
-2025-05-12T06:52:15.959Z - success: keystore loaded
-2025-05-12T06:52:15.966Z - success: node-library loaded
-2025-05-12T06:52:15.968Z - success: package-asset loaded
-2025-05-12T06:52:15.969Z - success: preferences loaded
-2025-05-12T06:52:15.972Z - success: project-exporter loaded
-2025-05-12T06:52:15.978Z - success: project-importer loaded
-2025-05-12T06:52:15.982Z - success: project-settings loaded
-2025-05-12T06:52:15.987Z - success: scene loaded
-2025-05-12T06:52:15.989Z - success: simulator-debugger loaded
-2025-05-12T06:52:15.990Z - success: sprite-editor loaded
-2025-05-12T06:52:15.997Z - success: store loaded
-2025-05-12T06:52:16.006Z - success: timeline loaded
-2025-05-12T06:52:16.012Z - success: xiaomi-runtime loaded
-2025-05-12T06:52:19.949Z - normal: Loading packages
-2025-05-12T06:52:19.976Z - normal: Watching packages
-2025-05-12T06:52:20.136Z - normal: Run Application
-2025-05-12T06:52:34.712Z - info: Cocos Services load base data!
-2025-05-12T07:42:37.177Z - error: TypeError: Cannot read property 'target' of null
-    at HTMLElement.e.addEventListener (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/builtin/inspector/panel/index.js:1:6524)
-    at Object.e.fire (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor-framework/lib/renderer/ui/utils/dom-utils.js:1:1797)
-    at HTMLElement.t [as _onConfirm] (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/builtin/inspector/panel/index.js:1:4611)
-    at Object.e.fire (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor-framework/lib/renderer/ui/utils/dom-utils.js:1:1797)
-    at HTMLElement._onInputConfirm (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor-framework/lib/renderer/ui/elements/input.js:1:2822)
-    at HTMLInputElement.n.addEventListener.t (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor-framework/lib/renderer/ui/behaviors/input-state.js:1:906)
-    at Object.e.clear (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor-framework/lib/renderer/ui/utils/dom-utils.js:1:960)
-    at HTMLElement._clear (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/builtin/inspector/panel/index.js:1:5886)
-    at HTMLElement.reset (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/builtin/inspector/panel/index.js:1:5670)
-    at HTMLElement.uninspect (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/builtin/inspector/panel/index.js:1:5773)
-2025-05-12T07:42:37.187Z - error: TypeError: Cannot read property 'target' of null
-    at HTMLElement.e.addEventListener (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/builtin/inspector/panel/index.js:1:6524)
-    at Object.e.fire (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor-framework/lib/renderer/ui/utils/dom-utils.js:1:1797)
-    at HTMLElement.t [as _onConfirm] (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/builtin/inspector/panel/index.js:1:4611)
-    at Object.e.fire (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor-framework/lib/renderer/ui/utils/dom-utils.js:1:1797)
-    at HTMLElement._onInputConfirm (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor-framework/lib/renderer/ui/elements/input.js:1:2822)
-    at HTMLInputElement.n.addEventListener.t (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor-framework/lib/renderer/ui/behaviors/input-state.js:1:906)
-    at Object.e.clear (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor-framework/lib/renderer/ui/utils/dom-utils.js:1:960)
-    at HTMLElement._clear (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/builtin/inspector/panel/index.js:1:5886)
-    at HTMLElement.reset (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/builtin/inspector/panel/index.js:1:5670)
-    at HTMLElement.uninspect (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/builtin/inspector/panel/index.js:1:5773)
-2025-05-12T07:42:37.189Z - error: TypeError: Cannot read property 'target' of null
-    at HTMLElement.e.addEventListener (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/builtin/inspector/panel/index.js:1:6524)
-    at Object.e.fire (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor-framework/lib/renderer/ui/utils/dom-utils.js:1:1797)
-    at HTMLElement.t [as _onConfirm] (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/builtin/inspector/panel/index.js:1:4611)
-    at Object.e.fire (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor-framework/lib/renderer/ui/utils/dom-utils.js:1:1797)
-    at HTMLElement._onInputConfirm (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor-framework/lib/renderer/ui/elements/input.js:1:2822)
-    at HTMLInputElement.n.addEventListener.t (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor-framework/lib/renderer/ui/behaviors/input-state.js:1:906)
-    at Object.e.clear (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor-framework/lib/renderer/ui/utils/dom-utils.js:1:960)
-    at HTMLElement._clear (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/builtin/inspector/panel/index.js:1:5886)
-    at HTMLElement.reset (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/builtin/inspector/panel/index.js:1:5670)
-    at HTMLElement.uninspect (/Applications/CocosCreator.app/Contents/Resources/app.asar/editor/builtin/inspector/panel/index.js:1:5773)
+2025-05-12T08:56:06.474Z - normal: Load ~/.CocosCreator/settings.json
+2025-05-12T08:56:06.554Z - normal: Initializing Asset Database
+2025-05-12T08:56:06.562Z - normal: checking language setting...
+2025-05-12T08:56:06.564Z - normal: Language: en
+2025-05-12T08:56:07.538Z - success: preview server running at http://localhost:7456
+2025-05-12T08:56:07.574Z - success: protocol editor-framework registered
+2025-05-12T08:56:07.575Z - success: protocol app registered
+2025-05-12T08:56:07.575Z - success: protocol theme registered
+2025-05-12T08:56:07.575Z - success: protocol packages registered
+2025-05-12T08:56:07.575Z - success: protocol uuid registerred
+2025-05-12T08:56:07.576Z - success: protocol db registerred
+2025-05-12T08:56:07.576Z - success: protocol thumbnail registerred
+2025-05-12T08:56:07.576Z - success: protocol unpack registerred
+2025-05-12T08:56:07.576Z - success: protocol disable-commonjs registerred
+2025-05-12T08:56:09.973Z - normal: connected!
+2025-05-12T08:56:09.992Z - normal: Check project /Users/cocos-1/VuLeTanPhat-07-K5/VuLeTanPhat-07-K5
+2025-05-12T08:56:10.004Z - normal: Initializing project /Users/cocos-1/VuLeTanPhat-07-K5/VuLeTanPhat-07-K5
+2025-05-12T08:56:10.507Z - normal: Initializing Cocos2d
+2025-05-12T08:56:11.513Z - normal: Initializing engine extends
+2025-05-12T08:56:11.621Z - success: alipay-adapter loaded
+2025-05-12T08:56:11.638Z - success: asset-db-debugger loaded
+2025-05-12T08:56:11.640Z - success: baidu-adapter loaded
+2025-05-12T08:56:11.641Z - success: color-picker loaded
+2025-05-12T08:56:11.816Z - success: fb-audience-network loaded
+2025-05-12T08:56:11.874Z - success: fb-live-stream loaded
+2025-05-12T08:56:11.877Z - success: google-play-instant loaded
+2025-05-12T08:56:11.887Z - success: huawei-runtime loaded
+2025-05-12T08:56:12.179Z - success: cpk-publish loaded
+2025-05-12T08:56:12.180Z - success: jsb-adapter loaded
+2025-05-12T08:56:12.184Z - success: oppo-runtime loaded
+2025-05-12T08:56:12.194Z - success: package-manager loaded
+2025-05-12T08:56:12.349Z - success: qqplay-adapter loaded
+2025-05-12T08:56:12.351Z - success: runtime-dev-tools loaded
+2025-05-12T08:56:12.359Z - success: sdkbox loaded
+2025-05-12T08:56:12.364Z - success: tester loaded
+2025-05-12T08:56:12.367Z - success: ui-kit-preview-extra loaded
+2025-05-12T08:56:12.370Z - success: ui-kit-preview loaded
+2025-05-12T08:56:12.374Z - success: ui-kit loaded
+2025-05-12T08:56:12.380Z - success: vivo-runtime loaded
+2025-05-12T08:56:12.380Z - success: weapp-adapter loaded
+2025-05-12T08:56:12.381Z - success: xiaomi-adapter loaded
+2025-05-12T08:56:12.384Z - success: alipay-minigame loaded
+2025-05-12T08:56:12.410Z - success: assets loaded
+2025-05-12T08:56:12.414Z - success: builder loaded
+2025-05-12T08:56:12.794Z - success: cocos-services loaded
+2025-05-12T08:56:12.806Z - success: console loaded
+2025-05-12T08:56:12.854Z - success: fb-instant-games loaded
+2025-05-12T08:56:12.861Z - success: game-window loaded
+2025-05-12T08:56:12.862Z - success: google-instant-games loaded
+2025-05-12T08:56:12.872Z - success: hierarchy loaded
+2025-05-12T08:56:12.876Z - success: inspector loaded
+2025-05-12T08:56:12.878Z - success: keystore loaded
+2025-05-12T08:56:12.885Z - success: node-library loaded
+2025-05-12T08:56:12.886Z - success: package-asset loaded
+2025-05-12T08:56:12.887Z - success: preferences loaded
+2025-05-12T08:56:12.890Z - success: project-exporter loaded
+2025-05-12T08:56:12.895Z - success: project-importer loaded
+2025-05-12T08:56:12.899Z - success: project-settings loaded
+2025-05-12T08:56:12.904Z - success: scene loaded
+2025-05-12T08:56:12.905Z - success: simulator-debugger loaded
+2025-05-12T08:56:12.907Z - success: sprite-editor loaded
+2025-05-12T08:56:12.913Z - success: store loaded
+2025-05-12T08:56:12.922Z - success: timeline loaded
+2025-05-12T08:56:12.927Z - success: xiaomi-runtime loaded
+2025-05-12T08:56:15.409Z - normal: Loading packages
+2025-05-12T08:56:15.424Z - normal: Watching packages
+2025-05-12T08:56:15.560Z - normal: Run Application
+2025-05-12T08:56:37.245Z - info: Cocos Services load base data!
