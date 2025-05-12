@@ -2,161 +2,213 @@ cc.Class({
   extends: cc.Component,
 
   properties: {
-    holder: cc.Node, // Node chứa các item prefab
-    itemPrefab: cc.Prefab, // Prefab của từng item
-    previewIcon: cc.Sprite, // Icon hiển thị ở InfoPanel
+    holder: cc.Node,
+    itemPrefab: cc.Prefab,
+    previewIcon: cc.Sprite,
     nameLabel: cc.Label,
     quantityLabel: cc.Label,
     typeLabel: cc.Label,
     effectLabel: cc.Label,
     useButton: cc.Button,
     deleteButton: cc.Button,
-    equipStatusLabel: cc.Label, // Label hiện trạng thái đã trang bị
+    equipStatusLabel: cc.Label,
+
     healing_icon: cc.SpriteFrame,
     sword_icon: cc.SpriteFrame,
   },
 
   onLoad() {
-    try {
-      this.itemConfigs = [
-        {
-          key: "healing_potion",
-          name: "Bình máu nhỏ",
-          quantity: 5,
-          type: "consumable",
-          effect: "Hồi 20 máu",
-          icon: this.healing_icon,
-        },
-        {
-          key: "sword",
-          name: "Kiếm Sắt",
-          quantity: 1,
-          type: "equipment",
-          effect: "Tăng 10 sức mạnh",
-          icon: this.sword_icon,
-        },
-      ];
+    console.log("[Inventory] onLoad");
 
-      this.itemList = {}; // key -> node
-      this.selectedItem = null; // Hiện vật phẩm đang chọn
+    this.itemConfigs = [
+      {
+        key: "healing_potion",
+        name: "Bình máu nhỏ",
+        quantity: 5,
+        type: "consumable",
+        effect: "Hồi 20 máu",
+        icon: this.healing_icon,
+      },
+      {
+        key: "sword",
+        name: "Kiếm Sắt",
+        quantity: 1,
+        type: "equipment",
+        effect: "Tăng 10 sức mạnh",
+        icon: this.sword_icon,
+      },
+      {
+        key: "mana_potion",
+        name: "Bình mana",
+        quantity: 3,
+        type: "consumable",
+        effect: "Hồi 15 mana",
+        icon: this.healing_icon,
+      },
+      {
+        key: "shield",
+        name: "Khiên Gỗ",
+        quantity: 1,
+        type: "equipment",
+        effect: "Tăng 5 giáp",
+        icon: this.sword_icon,
+      },
+      {
+        key: "elixir",
+        name: "Thuốc hồi sinh",
+        quantity: 2,
+        type: "consumable",
+        effect: "Hồi sinh ngay khi chết",
+        icon: this.healing_icon,
+      },
+      {
+        key: "dagger",
+        name: "Dao găm",
+        quantity: 1,
+        type: "equipment",
+        effect: "Tăng tốc độ tấn công",
+        icon: this.sword_icon,
+      },
+      {
+        key: "bomb",
+        name: "Bom khói",
+        quantity: 4,
+        type: "consumable",
+        effect: "Làm mù kẻ địch",
+        icon: this.healing_icon,
+      },
+      {
+        key: "helmet",
+        name: "Mũ sắt",
+        quantity: 1,
+        type: "equipment",
+        effect: "Tăng phòng thủ đầu",
+        icon: this.sword_icon,
+      },
+      {
+        key: "fire_scroll",
+        name: "Cuộn lửa",
+        quantity: 2,
+        type: "consumable",
+        effect: "Gây sát thương lửa diện rộng",
+        icon: this.healing_icon,
+      },
+    ];
 
-      this.useButton.node.on("click", this.onUseItem, this);
-      this.deleteButton.node.on("click", this.onDeleteItem, this);
+    this.itemList = {};
+    this.selectedItem = null;
 
-      console.log("[Inventory.js] onLoad completed");
-    } catch (error) {
-      console.error("[Inventory.js] Error in onLoad:", error);
-    }
+    this.useButton.node.on("click", this.onUseItem, this);
+    this.deleteButton.node.on("click", this.onDeleteItem, this);
   },
 
   start() {
-    try {
-      console.log("[Inventory.js] start");
-      this.spawnItems();
-    } catch (error) {
-      console.error("[Inventory.js] Error in start:", error);
-    }
+    console.log("[Inventory] start");
+
+    // Ẩn label trạng thái trang bị khi bắt đầu
+    this.equipStatusLabel.node.opacity = 0;
+
+    this.spawnItems();
   },
 
   spawnItems() {
-    try {
-      console.log("[Inventory.js] spawnItems");
+    console.log("[Inventory] spawnItems bắt đầu");
 
-      for (let itemData of this.itemConfigs) {
-        const itemNode = cc.instantiate(this.itemPrefab);
-        itemNode.parent = this.holder;
-        itemNode.emit("INIT_ITEM_DATA", itemData, this);
-        this.itemList[itemData.key] = itemNode;
+    for (let itemData of this.itemConfigs) {
+      console.log(`[Inventory] Tạo item: ${itemData.key}`);
 
-        console.log("[Inventory.js] Tạo item:", itemData.name);
+      const itemNode = cc.instantiate(this.itemPrefab);
+      itemNode.parent = this.holder;
+
+      const itemScript = itemNode.getComponent("Item");
+      if (itemScript) {
+        itemScript.initItem(itemData, this);
+      } else {
+        console.log(
+          `[Inventory] Không tìm thấy component "Item" trong node: ${itemData.key}`
+        );
       }
-    } catch (error) {
-      console.error("[Inventory.js] Error in spawnItems:", error);
+
+      this.itemList[itemData.key] = {
+        node: itemNode,
+        script: itemScript,
+      };
     }
+
+    console.log("[Inventory] spawnItems kết thúc");
   },
 
   onItemClick(itemData) {
-    try {
-      this.selectedItem = itemData;
+    console.log("[Inventory] onItemClick:", itemData);
 
-      this.previewIcon.spriteFrame = itemData.icon;
-      this.nameLabel.string = itemData.name;
-      this.quantityLabel.string = `Số lượng: ${itemData.quantity}`;
-      this.typeLabel.string = `Loại: ${itemData.type}`;
-      this.effectLabel.string = itemData.effect;
+    this.selectedItem = itemData;
 
-      console.log("[Inventory.js] Item clicked:", itemData.name);
-    } catch (error) {
-      console.error("[Inventory.js] Error in onItemClick:", error);
-    }
+    this.previewIcon.spriteFrame = itemData.icon;
+    this.nameLabel.string = itemData.name;
+    this.quantityLabel.string = `Số lượng: ${itemData.quantity}`;
+    this.typeLabel.string = `Loại: ${itemData.type}`;
+    this.effectLabel.string = itemData.effect;
   },
 
   onUseItem() {
-    try {
-      if (!this.selectedItem) return;
+    if (!this.selectedItem) return;
 
-      const item = this.selectedItem;
-      if (item.type === "consumable") {
-        item.quantity--;
-        if (item.quantity <= 0) {
-          this.removeItem(item.key);
-        } else {
-          this.quantityLabel.string = `Số lượng: ${item.quantity}`;
-        }
-      } else if (item.type === "equipment") {
+    const item = this.selectedItem;
+    console.log("[Inventory] onUseItem:", item);
+
+    if (item.type === "consumable") {
+      item.quantity--;
+      console.log(`[Inventory] Dùng consumable, còn lại: ${item.quantity}`);
+
+      if (item.quantity <= 0) {
         this.removeItem(item.key);
-        this.showEquipStatus(`Đã trang bị: ${item.name}`);
-      }
+      } else {
+        this.quantityLabel.string = `Số lượng: x${item.quantity}`;
 
-      console.log("[Inventory.js] Used item:", this.selectedItem.name);
-    } catch (error) {
-      console.error("[Inventory.js] Error in onUseItem:", error);
+        const entry = this.itemList[item.key];
+        if (entry && entry.script) {
+          entry.script.updateQuantity(item.quantity);
+        }
+      }
+    } else if (item.type === "equipment") {
+      this.removeItem(item.key);
+      this.showEquipStatus(`Đã trang bị: ${item.name}`);
     }
   },
 
   onDeleteItem() {
-    try {
-      if (!this.selectedItem) return;
-      this.removeItem(this.selectedItem.key);
-      console.log("[Inventory.js] Deleted item:", this.selectedItem.name);
-    } catch (error) {
-      console.error("[Inventory.js] Error in onDeleteItem:", error);
-    }
+    if (!this.selectedItem) return;
+    console.log("[Inventory] onDeleteItem:", this.selectedItem.key);
+    this.removeItem(this.selectedItem.key);
   },
 
   removeItem(key) {
-    try {
-      const node = this.itemList[key];
-      if (node) node.destroy();
-      delete this.itemList[key];
+    console.log("[Inventory] removeItem:", key);
 
-      // Clear panel
-      this.previewIcon.spriteFrame = null;
-      this.nameLabel.string = "";
-      this.quantityLabel.string = "";
-      this.typeLabel.string = "";
-      this.effectLabel.string = "";
-
-      this.selectedItem = null;
-
-      console.log("[Inventory.js] Removed item:", key);
-    } catch (error) {
-      console.error("[Inventory.js] Error in removeItem:", error);
+    const entry = this.itemList[key];
+    if (entry && entry.node) {
+      entry.node.destroy();
     }
+
+    delete this.itemList[key];
+
+    this.previewIcon.spriteFrame = null;
+    this.nameLabel.string = "";
+    this.quantityLabel.string = "";
+    this.typeLabel.string = "";
+    this.effectLabel.string = "";
+
+    this.selectedItem = null;
   },
 
   showEquipStatus(text) {
-    try {
-      this.equipStatusLabel.string = text;
-      this.equipStatusLabel.node.opacity = 255;
-      this.equipStatusLabel.node.stopAllActions();
-      this.equipStatusLabel.node.runAction(
-        cc.sequence(cc.delayTime(2), cc.fadeOut(1))
-      );
+    console.log("[Inventory] showEquipStatus:", text);
 
-      console.log("[Inventory.js] Equip status shown:", text);
-    } catch (error) {
-      console.error("[Inventory.js] Error in showEquipStatus:", error);
-    }
+    this.equipStatusLabel.string = text;
+    this.equipStatusLabel.node.opacity = 255;
+    this.equipStatusLabel.node.stopAllActions();
+    this.equipStatusLabel.node.runAction(
+      cc.sequence(cc.delayTime(2), cc.fadeOut(1))
+    );
   },
 });
