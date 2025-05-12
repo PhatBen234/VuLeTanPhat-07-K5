@@ -25,6 +25,8 @@ cc.Class({
     inputEffect: cc.EditBox,
     iconPreview: cc.Sprite,
     inputTypeToggleGroup: cc.ToggleContainer,
+
+    searchBar: cc.EditBox, // EditBox cho tìm kiếm
   },
 
   onLoad() {
@@ -32,6 +34,10 @@ cc.Class({
     this.itemList = {};
     this.selectedItem = null;
 
+    // Kết nối sự kiện tìm kiếm
+    this.searchBar.node.on("editing-did-ended", this.onSearchItem, this);
+
+    // Các sự kiện khác
     this.useButton.node.on("click", this.onUseItem, this);
     this.deleteButton.node.on("click", this.onDeleteItem, this);
     this.addItemToggleButton.node.on("click", this.toggleAddItemForm, this);
@@ -64,6 +70,7 @@ cc.Class({
     this.itemList[itemData.key] = {
       node: itemNode,
       script: itemScript,
+      data: itemData, // Lưu dữ liệu item vào đây để tìm kiếm sau này
     };
   },
 
@@ -189,5 +196,42 @@ cc.Class({
 
     this.spawnItem(newItem);
     this.addItemForm.active = false;
+  },
+
+  onSearchItem() {
+    const keyword = this.searchBar.string.trim().toLowerCase();
+    console.log(`Tìm kiếm với từ khóa: "${keyword}"`);
+
+    // Ẩn tất cả các item
+    for (let key in this.itemList) {
+      this.itemList[key].node.active = false;
+    }
+
+    if (keyword === "") {
+      // Nếu ô tìm kiếm trống, hiển thị lại tất cả item
+      console.log("Hiển thị tất cả item");
+      for (let key in this.itemList) {
+        this.itemList[key].node.active = true;
+      }
+      return;
+    }
+
+    // Kiểm tra từng item xem có chứa từ khóa trong tên không
+    for (let key in this.itemList) {
+      const entry = this.itemList[key];
+      const itemData = entry.data;
+
+      // Lấy tên item và chuyển thành chữ thường
+      const itemName = itemData.name.trim().toLowerCase();
+      console.log(`Đang kiểm tra item: "${itemName}"`);
+
+      // Kiểm tra xem từ khóa có nằm trong tên item
+      if (itemName.includes(keyword)) {
+        console.log(`Hiển thị item: "${itemName}"`);
+        entry.node.active = true;
+      } else {
+        entry.node.active = false;
+      }
+    }
   },
 });

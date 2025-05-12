@@ -615,7 +615,7 @@
     "relativePath": "Day3"
   },
   "46a1157a-58cf-447a-a5dd-bfc25793cf44": {
-    "asset": 1747032725860,
+    "asset": 1747042313802,
     "meta": 1746779642727,
     "relativePath": "Day3/Bai1"
   },
@@ -650,12 +650,12 @@
     "relativePath": "Day3/Bai1/Prefabs"
   },
   "5868c42b-af2b-44e3-b0b3-26750c5dba36": {
-    "asset": 1747040711508,
-    "meta": 1747040711559,
+    "asset": 1747044223244,
+    "meta": 1747044223258,
     "relativePath": "Day3/Bai1/Bai1_Day3.fire"
   },
   "d9eadb10-f3f9-42ad-807a-c7147088e743": {
-    "asset": 1747032725861,
+    "asset": 1747042313803,
     "meta": 1747022564503,
     "relativePath": "Day3/Bai1/scripts"
   },
@@ -735,8 +735,8 @@
     "relativePath": "Day3/Bai1/scripts/InventoryManager.js"
   },
   "abb70ec9-7501-4725-956c-8ee3a560f169": {
-    "asset": 1747040443766,
-    "meta": 1747040456660,
+    "asset": 1747044066709,
+    "meta": 1747044069985,
     "relativePath": "Day3/Bai1/scripts/InventoryUI.js"
   }
 }
