@@ -4,6 +4,8 @@ cc.Class({
   properties: {
     holder: cc.Node,
     itemPrefab: cc.Prefab,
+
+    // Hiển thị chi tiết item
     previewIcon: cc.Sprite,
     nameLabel: cc.Label,
     quantityLabel: cc.Label,
@@ -13,13 +15,22 @@ cc.Class({
     deleteButton: cc.Button,
     equipStatusLabel: cc.Label,
 
+    // Icon mẫu
     healing_icon: cc.SpriteFrame,
     sword_icon: cc.SpriteFrame,
+
+    // Add Item Form
+    addItemForm: cc.Node,
+    addItemToggleButton: cc.Button,
+    addItemButton: cc.Button,
+    inputName: cc.EditBox,
+    inputQuantity: cc.EditBox,
+    inputEffect: cc.EditBox,
+    iconPreview: cc.Sprite,
+    inputTypeToggleGroup: cc.ToggleContainer,
   },
 
   onLoad() {
-    console.log("[Inventory] onLoad");
-
     this.itemConfigs = [
       {
         key: "healing_potion",
@@ -37,62 +48,6 @@ cc.Class({
         effect: "Tăng 10 sức mạnh",
         icon: this.sword_icon,
       },
-      {
-        key: "mana_potion",
-        name: "Bình mana",
-        quantity: 3,
-        type: "consumable",
-        effect: "Hồi 15 mana",
-        icon: this.healing_icon,
-      },
-      {
-        key: "shield",
-        name: "Khiên Gỗ",
-        quantity: 1,
-        type: "equipment",
-        effect: "Tăng 5 giáp",
-        icon: this.sword_icon,
-      },
-      {
-        key: "elixir",
-        name: "Thuốc hồi sinh",
-        quantity: 2,
-        type: "consumable",
-        effect: "Hồi sinh ngay khi chết",
-        icon: this.healing_icon,
-      },
-      {
-        key: "dagger",
-        name: "Dao găm",
-        quantity: 1,
-        type: "equipment",
-        effect: "Tăng tốc độ tấn công",
-        icon: this.sword_icon,
-      },
-      {
-        key: "bomb",
-        name: "Bom khói",
-        quantity: 4,
-        type: "consumable",
-        effect: "Làm mù kẻ địch",
-        icon: this.healing_icon,
-      },
-      {
-        key: "helmet",
-        name: "Mũ sắt",
-        quantity: 1,
-        type: "equipment",
-        effect: "Tăng phòng thủ đầu",
-        icon: this.sword_icon,
-      },
-      {
-        key: "fire_scroll",
-        name: "Cuộn lửa",
-        quantity: 2,
-        type: "consumable",
-        effect: "Gây sát thương lửa",
-        icon: this.healing_icon,
-      },
     ];
 
     this.itemList = {};
@@ -100,33 +55,25 @@ cc.Class({
 
     this.useButton.node.on("click", this.onUseItem, this);
     this.deleteButton.node.on("click", this.onDeleteItem, this);
+    this.addItemToggleButton.node.on("click", this.toggleAddItemForm, this);
+    this.addItemButton.node.on("click", this.onAddNewItem, this);
   },
 
   start() {
-    console.log("[Inventory] start");
-
-    // Ẩn label trạng thái trang bị khi bắt đầu
     this.equipStatusLabel.node.opacity = 0;
-
     this.spawnItems();
+    this.hideItemDetails();
+    this.addItemForm.active = false;
   },
 
   spawnItems() {
-    console.log("[Inventory] spawnItems bắt đầu");
-
     for (let itemData of this.itemConfigs) {
-      console.log(`[Inventory] Tạo item: ${itemData.key}`);
-
       const itemNode = cc.instantiate(this.itemPrefab);
       itemNode.parent = this.holder;
 
       const itemScript = itemNode.getComponent("Item");
       if (itemScript) {
         itemScript.initItem(itemData, this);
-      } else {
-        console.log(
-          `[Inventory] Không tìm thấy component "Item" trong node: ${itemData.key}`
-        );
       }
 
       this.itemList[itemData.key] = {
@@ -134,13 +81,9 @@ cc.Class({
         script: itemScript,
       };
     }
-
-    console.log("[Inventory] spawnItems kết thúc");
   },
 
   onItemClick(itemData) {
-    console.log("[Inventory] onItemClick:", itemData);
-
     this.selectedItem = itemData;
 
     this.previewIcon.spriteFrame = itemData.icon;
@@ -148,23 +91,27 @@ cc.Class({
     this.quantityLabel.string = `Số lượng: ${itemData.quantity}`;
     this.typeLabel.string = `Loại: ${itemData.type}`;
     this.effectLabel.string = itemData.effect;
+
+    this.previewIcon.node.opacity = 255;
+    this.nameLabel.node.opacity = 255;
+    this.quantityLabel.node.opacity = 255;
+    this.typeLabel.node.opacity = 255;
+    this.effectLabel.node.opacity = 255;
+    this.useButton.node.active = true;
+    this.deleteButton.node.active = true;
   },
 
   onUseItem() {
     if (!this.selectedItem) return;
 
     const item = this.selectedItem;
-    console.log("[Inventory] onUseItem:", item);
 
     if (item.type === "consumable") {
       item.quantity--;
-      console.log(`[Inventory] Dùng consumable, còn lại: ${item.quantity}`);
-
       if (item.quantity <= 0) {
         this.removeItem(item.key);
       } else {
-        this.quantityLabel.string = `Số lượng: x${item.quantity}`;
-
+        this.quantityLabel.string = `Số lượng: ${item.quantity}`;
         const entry = this.itemList[item.key];
         if (entry && entry.script) {
           entry.script.updateQuantity(item.quantity);
@@ -178,19 +125,17 @@ cc.Class({
 
   onDeleteItem() {
     if (!this.selectedItem) return;
-    console.log("[Inventory] onDeleteItem:", this.selectedItem.key);
     this.removeItem(this.selectedItem.key);
   },
 
   removeItem(key) {
-    console.log("[Inventory] removeItem:", key);
-
     const entry = this.itemList[key];
     if (entry && entry.node) {
       entry.node.destroy();
     }
 
     delete this.itemList[key];
+    this.selectedItem = null;
 
     this.previewIcon.spriteFrame = null;
     this.nameLabel.string = "";
@@ -198,17 +143,91 @@ cc.Class({
     this.typeLabel.string = "";
     this.effectLabel.string = "";
 
-    this.selectedItem = null;
+    this.hideItemDetails();
+  },
+
+  hideItemDetails() {
+    this.previewIcon.node.opacity = 0;
+    this.nameLabel.node.opacity = 0;
+    this.quantityLabel.node.opacity = 0;
+    this.typeLabel.node.opacity = 0;
+    this.effectLabel.node.opacity = 0;
+    this.useButton.node.active = false;
+    this.deleteButton.node.active = false;
+    this.equipStatusLabel.node.opacity = 0;
   },
 
   showEquipStatus(text) {
-    console.log("[Inventory] showEquipStatus:", text);
-
     this.equipStatusLabel.string = text;
     this.equipStatusLabel.node.opacity = 255;
     this.equipStatusLabel.node.stopAllActions();
     this.equipStatusLabel.node.runAction(
       cc.sequence(cc.delayTime(2), cc.fadeOut(1))
     );
+  },
+
+  toggleAddItemForm() {
+    this.addItemForm.active = !this.addItemForm.active;
+  },
+
+  getSelectedType() {
+    const toggles = this.inputTypeToggleGroup.toggleItems;
+    for (let toggle of toggles) {
+      if (toggle.isChecked) {
+        return toggle.node.name.toLowerCase();
+      }
+    }
+    return null;
+  },
+
+  onAddNewItem() {
+    const name = this.inputName.string.trim();
+    const quantity = parseInt(this.inputQuantity.string);
+    const effect = this.inputEffect.string.trim();
+    const type = this.getSelectedType();
+    const icon = this.iconPreview.spriteFrame;
+
+    if (
+      !name ||
+      isNaN(quantity) ||
+      quantity <= 0 ||
+      !effect ||
+      !type ||
+      !icon
+    ) {
+      console.log("[AddItem] Thiếu dữ liệu hợp lệ");
+      return;
+    }
+
+    const key = name.toLowerCase().replace(/\s+/g, "_");
+
+    if (this.itemList[key]) {
+      console.log("[AddItem] Item đã tồn tại:", key);
+      return;
+    }
+
+    const newItem = {
+      key,
+      name,
+      quantity,
+      type,
+      effect,
+      icon,
+    };
+
+    const itemNode = cc.instantiate(this.itemPrefab);
+    itemNode.parent = this.holder;
+
+    const itemScript = itemNode.getComponent("Item");
+    if (itemScript) {
+      itemScript.initItem(newItem, this);
+    }
+
+    this.itemList[key] = {
+      node: itemNode,
+      script: itemScript,
+    };
+
+    this.addItemForm.active = false;
   },
 });
