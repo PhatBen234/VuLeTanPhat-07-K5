@@ -21,7 +21,7 @@ cc.Class({
   },
 
   updateQuantity(newQuantity) {
-    this.quantityLabel.string = `${newQuantity}`;
+    this.quantityLabel.string = `x${newQuantity}`;
   },
 
   onClick() {

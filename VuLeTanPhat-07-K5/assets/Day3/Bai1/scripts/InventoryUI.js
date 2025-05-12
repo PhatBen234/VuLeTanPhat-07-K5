@@ -89,7 +89,7 @@ cc.Class({
 
     this.previewIcon.spriteFrame = icon;
     this.nameLabel.string = name;
-    this.quantityLabel.string = `Số lượng: ${quantity}`;
+    this.quantityLabel.string = `Số lượng: x${quantity}`;
     this.typeLabel.string = `Loại: ${type}`;
     this.effectLabel.string = effect;
 
@@ -120,7 +120,7 @@ cc.Class({
       this.removeItemUI(key);
     } else {
       this.selectedItem.quantity = result.item.quantity;
-      this.quantityLabel.string = `Số lượng: ${result.item.quantity}`;
+      this.quantityLabel.string = `Số lượng: x${result.item.quantity}`;
       this.itemList[key].script.updateQuantity(result.item.quantity);
     }
 
