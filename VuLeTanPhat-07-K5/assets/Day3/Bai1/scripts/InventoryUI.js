@@ -6,7 +6,7 @@ cc.Class({
     holder: cc.Node,
     itemPrefab: cc.Prefab,
 
-    // UI detail
+    // UI details
     previewIcon: cc.Sprite,
     nameLabel: cc.Label,
     quantityLabel: cc.Label,
@@ -16,7 +16,7 @@ cc.Class({
     deleteButton: cc.Button,
     equipStatusLabel: cc.Label,
 
-    // Add Form
+    // Add Item Form
     addItemForm: cc.Node,
     addItemToggleButton: cc.Button,
     addItemButton: cc.Button,
@@ -34,30 +34,35 @@ cc.Class({
     this.itemList = {};
     this.selectedItem = null;
 
-    // Kết nối sự kiện tìm kiếm
-    this.searchBar.node.on("editing-did-ended", this.onSearchItem, this);
-
-    // Các sự kiện khác
-    this.useButton.node.on("click", this.onUseItem, this);
-    this.deleteButton.node.on("click", this.onDeleteItem, this);
-    this.addItemToggleButton.node.on("click", this.toggleAddItemForm, this);
-    this.addItemButton.node.on("click", this.onAddNewItem, this);
-
+    this.initializeEventListeners();
     this.manager.loadInitialItems();
   },
 
   start() {
+    this.setupUI();
+    this.spawnAllItems();
+  },
+
+  initializeEventListeners() {
+    // Tìm kiếm
+    this.searchBar.node.on("editing-did-ended", this.onSearchItem, this);
+
+    // Các sự kiện nút
+    this.useButton.node.on("click", this.onUseItem, this);
+    this.deleteButton.node.on("click", this.onDeleteItem, this);
+    this.addItemToggleButton.node.on("click", this.toggleAddItemForm, this);
+    this.addItemButton.node.on("click", this.onAddNewItem, this);
+  },
+
+  setupUI() {
     this.equipStatusLabel.node.opacity = 0;
     this.hideItemDetails();
-    this.spawnAllItems();
     this.addItemForm.active = false;
   },
 
   spawnAllItems() {
     const items = this.manager.getAllItems();
-    for (let itemData of items) {
-      this.spawnItem(itemData);
-    }
+    items.forEach((itemData) => this.spawnItem(itemData));
   },
 
   spawnItem(itemData) {
@@ -70,32 +75,43 @@ cc.Class({
     this.itemList[itemData.key] = {
       node: itemNode,
       script: itemScript,
-      data: itemData, // Lưu dữ liệu item vào đây để tìm kiếm sau này
+      data: itemData, // Lưu dữ liệu item để tìm kiếm
     };
   },
 
   onItemClick(itemData) {
     this.selectedItem = itemData;
+    this.updateItemDetails();
+  },
 
-    this.previewIcon.spriteFrame = itemData.icon;
-    this.nameLabel.string = itemData.name;
-    this.quantityLabel.string = `Số lượng: ${itemData.quantity}`;
-    this.typeLabel.string = `Loại: ${itemData.type}`;
-    this.effectLabel.string = itemData.effect;
+  updateItemDetails() {
+    const { name, quantity, type, effect, icon } = this.selectedItem;
 
-    this.previewIcon.node.opacity = 255;
-    this.nameLabel.node.opacity = 255;
-    this.quantityLabel.node.opacity = 255;
-    this.typeLabel.node.opacity = 255;
-    this.effectLabel.node.opacity = 255;
-    this.useButton.node.active = true;
-    this.deleteButton.node.active = true;
+    this.previewIcon.spriteFrame = icon;
+    this.nameLabel.string = name;
+    this.quantityLabel.string = `Số lượng: ${quantity}`;
+    this.typeLabel.string = `Loại: ${type}`;
+    this.effectLabel.string = effect;
+
+    // Hiển thị thông tin chi tiết
+    this.setItemDetailVisibility(true);
+  },
+
+  setItemDetailVisibility(isVisible) {
+    const opacity = isVisible ? 255 : 0;
+    this.previewIcon.node.opacity = opacity;
+    this.nameLabel.node.opacity = opacity;
+    this.quantityLabel.node.opacity = opacity;
+    this.typeLabel.node.opacity = opacity;
+    this.effectLabel.node.opacity = opacity;
+    this.useButton.node.active = isVisible;
+    this.deleteButton.node.active = isVisible;
   },
 
   onUseItem() {
     if (!this.selectedItem) return;
 
-    const key = this.selectedItem.key;
+    const { key } = this.selectedItem;
     const result = this.manager.useItem(key);
 
     if (!result) return;
@@ -115,9 +131,10 @@ cc.Class({
 
   onDeleteItem() {
     if (!this.selectedItem) return;
-    const key = this.selectedItem.key;
 
+    const { key } = this.selectedItem;
     const deleted = this.manager.deleteItem(key);
+
     if (deleted) {
       this.removeItemUI(key);
     }
@@ -132,13 +149,7 @@ cc.Class({
   },
 
   hideItemDetails() {
-    this.previewIcon.node.opacity = 0;
-    this.nameLabel.node.opacity = 0;
-    this.quantityLabel.node.opacity = 0;
-    this.typeLabel.node.opacity = 0;
-    this.effectLabel.node.opacity = 0;
-    this.useButton.node.active = false;
-    this.deleteButton.node.active = false;
+    this.setItemDetailVisibility(false);
     this.equipStatusLabel.node.opacity = 0;
   },
 
@@ -172,66 +183,45 @@ cc.Class({
     const type = this.getSelectedType();
     const icon = this.iconPreview.spriteFrame;
 
-    if (
-      !name ||
-      isNaN(quantity) ||
-      quantity <= 0 ||
-      !effect ||
-      !type ||
-      !icon
-    ) {
+    if (this.isItemValid(name, quantity, effect, type, icon)) {
+      const key = name.toLowerCase().replace(/\s+/g, "_");
+      const newItem = { key, name, quantity, type, effect, icon };
+
+      const added = this.manager.addItem(newItem);
+      if (added) {
+        this.spawnItem(newItem);
+        this.addItemForm.active = false;
+      } else {
+        console.log("[AddItem] Item đã tồn tại:", key);
+      }
+    } else {
       console.log("[AddItem] Thiếu dữ liệu hợp lệ");
-      return;
     }
+  },
 
-    const key = name.toLowerCase().replace(/\s+/g, "_");
-
-    const newItem = { key, name, quantity, type, effect, icon };
-
-    const added = this.manager.addItem(newItem);
-    if (!added) {
-      console.log("[AddItem] Item đã tồn tại:", key);
-      return;
-    }
-
-    this.spawnItem(newItem);
-    this.addItemForm.active = false;
+  isItemValid(name, quantity, effect, type, icon) {
+    return name && !isNaN(quantity) && quantity > 0 && effect && type && icon;
   },
 
   onSearchItem() {
     const keyword = this.searchBar.string.trim().toLowerCase();
+    this.filterItems(keyword);
+  },
+
+  filterItems(keyword) {
     console.log(`Tìm kiếm với từ khóa: "${keyword}"`);
 
-    // Ẩn tất cả các item
-    for (let key in this.itemList) {
-      this.itemList[key].node.active = false;
-    }
+    Object.keys(this.itemList).forEach((key) => {
+      const itemData = this.itemList[key].data;
+      this.itemList[key].node.active = this.isItemMatchingSearch(
+        itemData,
+        keyword
+      );
+    });
+  },
 
-    if (keyword === "") {
-      // Nếu ô tìm kiếm trống, hiển thị lại tất cả item
-      console.log("Hiển thị tất cả item");
-      for (let key in this.itemList) {
-        this.itemList[key].node.active = true;
-      }
-      return;
-    }
-
-    // Kiểm tra từng item xem có chứa từ khóa trong tên không
-    for (let key in this.itemList) {
-      const entry = this.itemList[key];
-      const itemData = entry.data;
-
-      // Lấy tên item và chuyển thành chữ thường
-      const itemName = itemData.name.trim().toLowerCase();
-      console.log(`Đang kiểm tra item: "${itemName}"`);
-
-      // Kiểm tra xem từ khóa có nằm trong tên item
-      if (itemName.includes(keyword)) {
-        console.log(`Hiển thị item: "${itemName}"`);
-        entry.node.active = true;
-      } else {
-        entry.node.active = false;
-      }
-    }
+  isItemMatchingSearch(itemData, keyword) {
+    const itemName = itemData.name.trim().toLowerCase();
+    return keyword === "" || itemName.includes(keyword);
   },
 });
