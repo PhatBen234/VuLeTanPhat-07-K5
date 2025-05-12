@@ -78,7 +78,7 @@
     "_level": 1,
     "_components": [
       {
-        "__id__": 51
+        "__id__": 48
       }
     ],
     "_prefab": null,
@@ -162,7 +162,7 @@
       "__type__": "cc.Vec3",
       "x": 0,
       "y": 0,
-      "z": 221.54399335703621
+      "z": 234.6928844255829
     },
     "_scale": {
       "__type__": "cc.Vec3",
@@ -519,7 +519,7 @@
     "_contentSize": {
       "__type__": "cc.Size",
       "width": 300,
-      "height": 326
+      "height": 50
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -619,7 +619,7 @@
     "node": {
       "__id__": 12
     },
-    "_enabled": false,
+    "_enabled": true,
     "_materials": [
       {
         "__uuid__": "eca5d2f2-8ef6-41c2-bbe6-f9c79d09c432"
@@ -643,10 +643,10 @@
     "_layoutSize": {
       "__type__": "cc.Size",
       "width": 300,
-      "height": 326
+      "height": 50
     },
     "_resize": 1,
-    "_N$layoutType": 3,
+    "_N$layoutType": 2,
     "_N$padding": 0,
     "_N$cellSize": {
       "__type__": "cc.Size",
@@ -2182,39 +2182,34 @@
     "previewIcon": {
       "__id__": 20
     },
-    "itemConfigs": [
-      {
-        "__id__": 48
-      },
-      {
-        "__id__": 49
-      },
-      {
-        "__id__": 50
-      }
-    ],
-    "_id": "12oDueyjpAv7H0mElGTAGS"
-  },
-  {
-    "__type__": "ItemData",
-    "key": "S",
-    "icon": {
-      "__uuid__": "1c976ffa-4f2a-47a2-b0d9-fd73dd671cc1"
-    }
-  },
-  {
-    "__type__": "ItemData",
-    "key": "W",
-    "icon": {
+    "nameLabel": {
+      "__id__": 22
+    },
+    "quantityLabel": {
+      "__id__": 24
+    },
+    "typeLabel": {
+      "__id__": 26
+    },
+    "effectLabel": {
+      "__id__": 28
+    },
+    "useButton": {
+      "__id__": 35
+    },
+    "deleteButton": {
+      "__id__": 42
+    },
+    "equipStatusLabel": {
+      "__id__": 45
+    },
+    "healing_icon": {
       "__uuid__": "8dfeee97-c92e-4941-a9cd-5b19b211d776"
-    }
-  },
-  {
-    "__type__": "ItemData",
-    "key": "E",
-    "icon": {
+    },
+    "sword_icon": {
       "__uuid__": "82ba7b3a-d3cf-4701-b8b6-8db67d8f1e87"
-    }
+    },
+    "_id": "12oDueyjpAv7H0mElGTAGS"
   },
   {
     "__type__": "cc.Canvas",

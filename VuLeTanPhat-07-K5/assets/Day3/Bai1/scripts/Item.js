@@ -7,88 +7,53 @@ cc.Class({
   },
 
   onLoad() {
-    console.log(
-      "[ItemDisplay] onLoad: Gắn listener INIT_ITEM_DATA và TOUCH_END"
-    );
+    console.log("[Item.js] onLoad");
 
-    // Gắn sự kiện INIT_ITEM_DATA trực tiếp vào node
     this.node.on("INIT_ITEM_DATA", this.initItem, this);
-
-    // Kiểm tra node và gắn sự kiện click cho icon và quantityLabel
     this.node.on(cc.Node.EventType.TOUCH_END, this.onClick, this);
-
-    if (this.icon && this.icon.node) {
-      this.icon.node.on(cc.Node.EventType.TOUCH_END, this.onIconClick, this);
-    } else {
-      console.warn("[ItemDisplay] Không có icon để gắn sự kiện click!");
-    }
-
-    if (this.quantityLabel && this.quantityLabel.node) {
-      this.quantityLabel.node.on(
-        cc.Node.EventType.TOUCH_END,
-        this.onQuantityClick,
-        this
-      );
-    }
   },
 
   initItem(itemData, controller) {
-    console.log(
-      "[ItemDisplay] INIT_ITEM_DATA nhận được:",
-      itemData,
-      controller
-    );
+    try {
+      console.log("[Item.js] initItem called");
 
-    this.data = itemData;
-    this.controller = controller;
+      this.data = itemData;
+      this.controller = controller;
 
-    this.icon.spriteFrame = itemData.icon;
-    this.quantityLabel.string = `${itemData.quantity}`;
-    this.node.name = itemData.key;
+      if (this.icon) {
+        this.icon.spriteFrame = itemData.icon;
+      } else {
+        console.error("[Item.js] icon not found");
+      }
 
-    console.log("[ItemDisplay] Item đã được khởi tạo:", this.node.name);
-  },
+      if (this.quantityLabel) {
+        this.quantityLabel.string = `${itemData.quantity}`;
+      } else {
+        console.error("[Item.js] quantityLabel not found");
+      }
 
-  onClick(event) {
-    console.log("[ItemDisplay] onClick: TOUCH_END được gọi!");
-    console.log("[ItemDisplay] this.data =", this.data);
-    console.log("[ItemDisplay] this.controller =", this.controller);
-
-    // Gọi trực tiếp controller để xử lý
-    if (!this.data || !this.controller) {
-      console.warn("[ItemDisplay] Thiếu data hoặc controller");
-      return;
-    }
-
-    if (typeof this.controller.onItemClick === "function") {
-      console.log("[ItemDisplay] Gọi controller.onItemClick với:", this.data);
-      this.controller.onItemClick(this.data);
-    } else {
-      console.error("[ItemDisplay] controller KHÔNG có hàm onItemClick!");
+      this.node.name = itemData.key;
+      console.log("[Item.js] Item initialized: ", itemData.name);
+    } catch (error) {
+      console.error("[Item.js] Error initializing item:", error);
     }
   },
 
-  onIconClick() {
-    console.log("[ItemDisplay] icon.sprite được click!");
-  },
-
-  onQuantityClick() {
-    console.log("[ItemDisplay] quantityLabel được click!");
+  onClick() {
+    try {
+      if (this.data && this.controller) {
+        console.log("[Item.js] Item clicked:", this.data.name);
+        this.controller.onItemClick(this.data);
+      } else {
+        console.error("[Item.js] No data or controller");
+      }
+    } catch (error) {
+      console.error("[Item.js] Error on item click:", error);
+    }
   },
 
   onDestroy() {
-    console.log("[ItemDisplay] onDestroy: Hủy listener");
     this.node.off("INIT_ITEM_DATA", this.initItem, this);
     this.node.off(cc.Node.EventType.TOUCH_END, this.onClick, this);
-    if (this.icon && this.icon.node) {
-      this.icon.node.off(cc.Node.EventType.TOUCH_END, this.onIconClick, this);
-    }
-    if (this.quantityLabel && this.quantityLabel.node) {
-      this.quantityLabel.node.off(
-        cc.Node.EventType.TOUCH_END,
-        this.onQuantityClick,
-        this
-      );
-    }
   },
 });

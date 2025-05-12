@@ -168,7 +168,7 @@
       "__type__": "cc.Vec3",
       "x": 0,
       "y": 0,
-      "z": 221.77408128719298
+      "z": 554.2562584220408
     },
     "_scale": {
       "__type__": "cc.Vec3",
@@ -1071,7 +1071,7 @@
     "timeLabel": {
       "__id__": 8
     },
-    "numSeconds": 60,
+    "numSeconds": 10,
     "spawnInterval": 1,
     "gamePanel": {
       "__id__": 23

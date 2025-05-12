@@ -38,9 +38,10 @@ cc.Class({
 
     // Phát sự kiện "target-clicked" với điểm số của mục tiêu
     // this.node.emit("target-clicked", this.point);
-    console.log(this.node);
-    console.log(this.node.parent.getComponent("GameBalloon"));
-    console.log(this.node.parent.parent.getComponent("GameBalloon"));
+    // console.log(this.node);
+    // console.log(this.node.parent.getComponent("GameBalloon"));
+    // console.log(this.node.parent.parent.getComponent("GameBalloon"));
+    // console.log(this.node.parent.parent.children.getChildByName("GameBalloon"));
     console.log(this.node.parent.parent.children);
     this.node.parent.parent.children.forEach((child) => {
       if (child._name == "GameBalloon") {
