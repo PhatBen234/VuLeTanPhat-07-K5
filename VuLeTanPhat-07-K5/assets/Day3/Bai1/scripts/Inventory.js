@@ -90,7 +90,7 @@ cc.Class({
         name: "Cuộn lửa",
         quantity: 2,
         type: "consumable",
-        effect: "Gây sát thương lửa diện rộng",
+        effect: "Gây sát thương lửa",
         icon: this.healing_icon,
       },
     ];
