@@ -1,60 +1,75 @@
+// Hàm chính: nhận vào 1 mảng các hàm async callback-style
 function callbackManager(funcArray) {
-  let currentFuncs = [...funcArray]; // Clone để xử lý
-  let retryCount = 0;
+  let currentFuncs = [...funcArray]; // Clone mảng để xử lý, tránh làm hỏng mảng gốc
+  let retryCount = 0;                // Đếm số lần chạy lại (để biết là lần mấy)
 
+  // Hàm phụ để chạy loạt hàm hiện tại
   function run() {
+    // In thông báo chạy lần đầu hay chạy lại
     console.log(retryCount === 0 ? "\n🔁 Bắt đầu chạy hàm lần đầu...\n" : `\n🔁 Bắt đầu chạy lại lần ${retryCount}...\n`);
-    let index = 0;
-    let newFuncs = []; // Mảng mới cho lần chạy sau
-    let hasError = false;
+    
+    let index = 0;            // Biến đếm vị trí hàm đang chạy
+    let newFuncs = [];        // Mảng mới chứa các hàm thành công để chạy lại nếu cần
+    let hasError = false;     // Cờ báo nếu có lỗi xảy ra
 
+    // Hàm đệ quy chạy từng hàm một theo thứ tự
     function execute() {
+      // Khi đã chạy hết các hàm
       if (index >= currentFuncs.length) {
         if (hasError) {
+          // Nếu có lỗi: thông báo và chuẩn bị chạy lại sau 5s
           console.log("\n❌ Có hàm bị lỗi, sẽ chạy lại toàn bộ sau 5s...\n");
-          currentFuncs = newFuncs; // Chỉ giữ lại các hàm thành công
-          retryCount++;
-          setTimeout(run, 5000);
+          currentFuncs = newFuncs; // Chỉ giữ lại hàm thành công để chạy lại
+          retryCount++;            // Tăng số lần chạy lại
+          setTimeout(run, 5000);   // Chờ 5s rồi chạy lại
         } else {
+          // Nếu tất cả đều thành công thì kết thúc
           console.log("\n✅ Tất cả hàm đã chạy thành công!\n");
         }
         return;
       }
 
+      // Lấy hàm hiện tại theo index
       const func = currentFuncs[index];
+
+      // In trạng thái bắt đầu chạy hàm
       console.log(`Started asyncFunc${func.originalIndex + 1}`);
+
       try {
+        // Gọi hàm async với callback nhận lỗi (err)
         func.cb((err) => {
           if (err) {
+            // Nếu lỗi: thông báo lỗi
             console.log(`❌ Hàm ${func.originalIndex} bị lỗi: ${err.message}`);
-            hasError = true;
-            // KHÔNG đưa vào newFuncs → loại hẳn ra
+            hasError = true; // Cắm cờ lỗi
+            // Không push vào newFuncs → bỏ luôn khỏi lần chạy sau
           } else {
+            // Nếu thành công: in log và đưa vào danh sách chạy tiếp
             console.log(`Completed asyncFunc${func.originalIndex + 1}`);
             console.log(`✅ Hàm ${func.originalIndex} chạy thành công!`);
-            newFuncs.push(func); // Chỉ giữ hàm thành công
+            newFuncs.push(func); // Chỉ giữ hàm đã thành công
           }
-          index++;
-          execute();
+          index++;      // Tăng chỉ số để xử lý tiếp
+          execute();    // Gọi đệ quy cho hàm tiếp theo
         });
       } catch (e) {
+        // Nếu có lỗi throw ngoài callback (hiếm): bắt ngoại lệ
         console.log(`❌ Exception tại hàm ${func.originalIndex}: ${e.message}`);
         hasError = true;
         index++;
-        execute();
+        execute(); // Tiếp tục xử lý hàm sau
       }
     }
 
+    // Bắt đầu chuỗi gọi đệ quy
     execute();
   }
 
-  // Gán chỉ số ban đầu để theo dõi cho đẹp
+  // Gắn thông tin chỉ số ban đầu vào từng hàm để in log chính xác
   const wrappedFuncs = funcArray.map((f, i) => ({ cb: f, originalIndex: i }));
-  currentFuncs = wrappedFuncs;
-  run();
+  currentFuncs = wrappedFuncs; // Cập nhật mảng đang chạy
+  run(); // Bắt đầu thực thi chuỗi
 }
-
-
 
 function asyncFunc1(callback) {
   console.log("Started asyncFunc1");
