@@ -738,5 +738,20 @@
     "asset": 1747045018609,
     "meta": 1747045026991,
     "relativePath": "Day3/Bai1/scripts/Item.js"
+  },
+  "37166433-1ee2-4e60-9c38-ceec675d4e63": {
+    "asset": 1747209547571,
+    "meta": 1747209547569,
+    "relativePath": "Day7"
+  },
+  "1bb2f703-8cf6-4cbb-8034-c6f34dccdd76": {
+    "asset": 1747208178184,
+    "meta": 1747209547571,
+    "relativePath": "Day7/Scence"
+  },
+  "77f37558-1d0f-439c-8ca8-7806bdab3b6b": {
+    "asset": 1747208178193,
+    "meta": 1747209547571,
+    "relativePath": "Day7/Script"
   }
 }
