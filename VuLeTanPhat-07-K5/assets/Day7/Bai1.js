@@ -18,8 +18,9 @@ async function getServerTime() { //async func
 }
 
 (async () => { //goi ham, ham nay la 1 IIFE, tuc la duoc goi ngay lap tuc sau khi duoc dinh nghia
-  const serverTime = await getServerTime();// cho ket qua tra ve
+  const serverTime = await getServerTime();// cho ket qua ham tren tra ve
 
   console.log("🕒 Thời gian server (ms):", serverTime);
   console.log("📅 Thời gian server (ISO):", new Date(serverTime).toISOString());
 })();
+// chay tren console cua GG
