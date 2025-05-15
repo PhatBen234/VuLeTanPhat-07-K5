@@ -76,12 +76,15 @@ cc.Class({
     }
 
     function promisify(fn) {
+      // dinh nghia no la 1 promisify
       return function () {
+        //tra ve ham moi, nhan tat ca doi so args truyen vao ham
         try {
-          var result = fn.apply(void 0, arguments);
-          return result instanceof Promise ? result : Promise.resolve(result);
+          var result = fn.apply(void 0, arguments); // goi ham fn goc voi cac doi so;
+
+          return result instanceof Promise ? result : Promise.resolve(result); // ep no thanh promise, neu la promise thi thoi, con k ep no thanh promise
         } catch (err) {
-          return Promise.reject(err);
+          return Promise.reject(err); // tra ve promise reject
         }
       };
     } // Chạy thử
@@ -103,7 +106,9 @@ cc.Class({
 
             case 5:
               serverTime = _context.sent;
-              latency = serverTime - localTime;
+              // gan promisify
+              latency = serverTime - localTime; //tinh do tre
+
               result = "Local Time: " + localTime + "\nServer Time: " + serverTime + "\n\u0110\u1ED9 tr\u1EC5: " + latency + "ms";
               cc.log(result);
               _this.timeLabel.string = result;

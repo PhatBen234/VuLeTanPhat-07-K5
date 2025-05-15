@@ -514,16 +514,6 @@
     "meta": 1747297749523,
     "relativePath": "Day7/Script"
   },
-  "40a187a2-4d53-4762-8372-726e1d0e99a9": {
-    "asset": 1747291434904,
-    "meta": 1747297612371,
-    "relativePath": "Day7/Script/Bai7_D7.js"
-  },
-  "304f11fe-a86f-44ad-b9da-82a83a2cd511": {
-    "asset": 1747291434904,
-    "meta": 1747297617744,
-    "relativePath": "Day7/Script/Bai8_D7.js"
-  },
   "7b48521f-7132-4cbd-8be8-86512f3030fc": {
     "asset": 1747291434904,
     "meta": 1747297624994,
@@ -603,5 +593,15 @@
     "asset": 1747300398664,
     "meta": 1747300457292,
     "relativePath": "Day7/Script/Bai6_D7.js"
+  },
+  "40a187a2-4d53-4762-8372-726e1d0e99a9": {
+    "asset": 1747301901495,
+    "meta": 1747302138559,
+    "relativePath": "Day7/Script/Bai7_D7.js"
+  },
+  "304f11fe-a86f-44ad-b9da-82a83a2cd511": {
+    "asset": 1747303003169,
+    "meta": 1747303025113,
+    "relativePath": "Day7/Script/Bai8_D7.js"
   }
 }

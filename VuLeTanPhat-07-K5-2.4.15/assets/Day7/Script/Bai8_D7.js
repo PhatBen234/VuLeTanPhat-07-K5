@@ -31,22 +31,22 @@ cc.Class({
     }
 
     // Hàm promisify
-    function promisify(fn) {
-      return function (...args) {
+    function promisify(fn) { // dinh nghia no la 1 promisify
+      return function (...args) { //tra ve ham moi, nhan tat ca doi so args truyen vao ham
         try {
-          const result = fn(...args);
-          return result instanceof Promise ? result : Promise.resolve(result);
+          const result = fn(...args)// goi ham fn goc voi cac doi so;
+          return result instanceof Promise ? result : Promise.resolve(result);// ep no thanh promise, neu la promise thi thoi, con k ep no thanh promise
         } catch (err) {
-          return Promise.reject(err);
+          return Promise.reject(err);// tra ve promise reject
         }
       };
     }
 
     // Chạy thử
-    (async () => {
-      const localTime = await promisify(getLocalTime)();
-      const serverTime = await promisify(getServerTime)();
-      const latency = serverTime - localTime;
+    (async () => {// tao va goi ham async an danh, dung de await ben trong
+      const localTime = await promisify(getLocalTime)();// gan promisify
+      const serverTime = await promisify(getServerTime)();// gan promisify
+      const latency = serverTime - localTime; //tinh do tre
 
       const result = `Local Time: ${localTime}\nServer Time: ${serverTime}\nĐộ trễ: ${latency}ms`;
       cc.log(result);

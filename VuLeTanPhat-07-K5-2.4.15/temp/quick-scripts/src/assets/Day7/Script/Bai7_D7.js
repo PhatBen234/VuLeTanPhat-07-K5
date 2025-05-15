@@ -23,18 +23,21 @@ cc.Class({
 
   },
   start: function start() {
+    //dc goi khi node được tạo
     // Truyền label xuống LazyMan để in ra
-    var lazyMan = new LazyMan('jack', this.logLabel);
+    var lazyMan = new LazyMan('jack', this.logLabel); //method chaining
+
     lazyMan.eat('apple').sleep(5000).eat('hamburger').sleep(3000).eat('pear');
   }
 });
 
 var LazyMan = /*#__PURE__*/function () {
   function LazyMan(name, label) {
-    this.queue = [];
+    this.queue = []; // hang doi cac ham
+
     this.label = label; // giữ tham chiếu label
 
-    this.sayName(name);
+    this.sayName(name); // hanh dong dau tien them vao queue
 
     this._run(); // bắt đầu thực thi hàng đợi
 
@@ -43,20 +46,23 @@ var LazyMan = /*#__PURE__*/function () {
   var _proto = LazyMan.prototype;
 
   _proto._log = function _log(message) {
-    cc.log(message);
+    cc.log(message); // in ra console
 
     if (this.label) {
-      this.label.string += message + '\n';
+      this.label.string += message + '\n'; // them vao label
     }
   };
 
   _proto.sayName = function sayName(name) {
     var _this = this;
 
+    // them 1 ham vao queue
     this.queue.push(function () {
-      _this._log("My name is " + name);
+      // 
+      _this._log("My name is " + name); //lgo name
 
-      return Promise.resolve();
+
+      return Promise.resolve(); //tra ve promise hoan thanh
     });
   };
 
@@ -68,13 +74,14 @@ var LazyMan = /*#__PURE__*/function () {
 
       return Promise.resolve();
     });
-    return this;
+    return this; // de chaining lien ket .sleep().eat() lien tuc
   };
 
   _proto.sleep = function sleep(ms) {
     var _this3 = this;
 
     this.queue.push(function () {
+      // them vao queue, them setTimeout()
       _this3._log("I am sleeping...");
 
       return new Promise(function (resolve) {
@@ -82,10 +89,10 @@ var LazyMan = /*#__PURE__*/function () {
           _this3._log("After " + ms / 1000 + " seconds");
 
           resolve();
-        }, ms);
+        }, ms); // sleep xong goi resolve
       });
     });
-    return this;
+    return this; // de chaining lien ket .sleep().eat() lien tuc
   };
 
   _proto._run = /*#__PURE__*/function () {
