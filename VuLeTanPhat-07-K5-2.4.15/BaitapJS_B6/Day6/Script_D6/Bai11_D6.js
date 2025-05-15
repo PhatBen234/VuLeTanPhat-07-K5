@@ -3,7 +3,7 @@ function asyncFunc1() {
     console.log("Started asyncFunc1");
     setTimeout(() => {
       console.log("Completed asyncFunc1");
-      resolve("Result 1");
+      resolve("Result 1");//ham thanh cong
     }, 1000);
   });
 }
@@ -13,7 +13,7 @@ function asyncFunc2() {
     console.log("Started asyncFunc2");
     setTimeout(() => {
       console.log("Failed asyncFunc2");
-      reject("Error in asyncFunc2");
+      reject("Error in asyncFunc2");// ham that bai
     }, 1000);
   });
 }
@@ -23,7 +23,7 @@ function asyncFunc3() {
     console.log("Started asyncFunc3");
     setTimeout(() => {
       console.log("Completed asyncFunc3");
-      resolve("Result 3");
+      resolve("Result 3");// ham thanh cong
     }, 1000);
   });
 }

@@ -35,7 +35,7 @@ asyncFunc1()
   })
   .then((result2) => {
     console.log("Result 2:", result2);
-    return asyncFunc3();
+    return asyncFunc3();//goi ham 3
   })
   .then((result3) => {
     console.log("Result 3:", result3);

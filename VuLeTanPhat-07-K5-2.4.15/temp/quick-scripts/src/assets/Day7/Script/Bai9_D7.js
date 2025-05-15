@@ -16,7 +16,8 @@ cc.Class({
     outputLabel: cc.Label
   },
   start: function start() {
-    this.testCircuitBreaker();
+    // ngay khi node vua chay
+    this.testCircuitBreaker(); // goi ngay CB
   },
   getServerTime: function getServerTime() {
     return _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee() {
@@ -65,10 +66,13 @@ cc.Class({
         while (1) {
           switch (_context3.prev = _context3.next) {
             case 0:
-              isOpen = true;
+              // nhan 1 (ham async nao do, gioi han thoi gian)
+              isOpen = true; // mo cong tac, cho phep nguoi ta call toi
+
               setTimeout(function () {
                 isOpen = false;
-              }, timeThreshold);
+              }, timeThreshold); // sau khi het thoi gian quy dinh, mach dong lai, k cho goi ham fn nua
+
               return _context3.abrupt("return", /*#__PURE__*/_asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee2() {
                 var _args2 = arguments;
                 return _regeneratorRuntime().wrap(function _callee2$(_context2) {
@@ -119,6 +123,7 @@ cc.Class({
 
             case 2:
               getTimeLimited = _context6.sent;
+              // tao 1 CB gioi han trong 2s
               setTimeout( /*#__PURE__*/_asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee4() {
                 var result1;
                 return _regeneratorRuntime().wrap(function _callee4$(_context4) {
@@ -139,7 +144,8 @@ cc.Class({
                     }
                   }
                 }, _callee4);
-              })), 300);
+              })), 300); // 300ms => ham nay chac chan thanh cong
+
               setTimeout( /*#__PURE__*/_asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee5() {
                 var result2;
                 return _regeneratorRuntime().wrap(function _callee5$(_context5) {
@@ -160,7 +166,7 @@ cc.Class({
                     }
                   }
                 }, _callee5);
-              })), 2100);
+              })), 2100); // 2100ms => hon 2000ms roi, nen se bi service closed
 
             case 5:
             case "end":
