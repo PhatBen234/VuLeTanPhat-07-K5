@@ -1,7 +1,7 @@
 [
   {
     "__type__": "cc.SceneAsset",
-    "_name": "Bai5",
+    "_name": "Bai5_D7",
     "_objFlags": 0,
     "_native": "",
     "scene": {
@@ -331,7 +331,7 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "Bai5",
+    "_name": "Bai5_D7",
     "_objFlags": 0,
     "_parent": {
       "__id__": 2
@@ -389,7 +389,7 @@
     "_is3DNode": false,
     "_groupIndex": 0,
     "groupIndex": 0,
-    "_id": "8cj7+i/DBPHJcfCo4Xu+gk"
+    "_id": "f0ZvGUYxNBbrmSxFaH5snR"
   },
   {
     "__type__": "c15a0e+BtZFHastKnyJR07z",
@@ -399,10 +399,10 @@
       "__id__": 7
     },
     "_enabled": true,
-    "timeLabel": {
+    "latencyLabel": {
       "__id__": 6
     },
-    "_id": "83VxUi08NPnqWPmJtcR7as"
+    "_id": "d3RLnNI9xO97hSgl+GTU0y"
   },
   {
     "__type__": "cc.Canvas",

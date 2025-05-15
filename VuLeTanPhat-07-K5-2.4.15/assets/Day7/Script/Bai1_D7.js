@@ -1,0 +1,32 @@
+cc.Class({
+  extends: cc.Component,
+
+  properties: {
+    timeLabel: cc.Label,  
+  },
+
+  onLoad() {
+    this.fetchServerTime(); //goi qua trinh lay thoi gian ngay khi node vua chay
+  },
+
+  async fetchServerTime() { // xai async thi xai dc await ben trong
+    try {
+      const response = await fetch(window.location.href, { //fetch, tuc gui http rq toi dia chi trang hien tai, 
+        method: 'HEAD',//nhung chi can HEAD, k can noi dung trang
+      });
+
+      const serverDate = response.headers.get("Date"); // lay gia tri header tu Date
+
+      if (!serverDate) {
+        throw new Error("Không lấy được thời gian từ header.");// k co date xu ly loi o catch
+      }
+
+      const timeStr = new Date(serverDate).toISOString(); //convert string thanh date VD:Tue, 14 May 2024 08:32:45 GMT -> 2024-05-14T08:32:45.000Z
+      this.timeLabel.string = "🕒 Server Time: " + timeStr; //set text cho label
+    } catch (err) { // neu co loi bat loi~
+      cc.error("❌ Lỗi khi lấy thời gian server:", err.message);
+      const localTime = new Date().toISOString();
+      this.timeLabel.string = "🕒 Local Time: " + localTime;
+    }
+  },
+});
