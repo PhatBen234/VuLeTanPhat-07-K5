@@ -22,16 +22,23 @@ cc.Class({
     }
   },
   fetchImageWithTimeout: function fetchImageWithTimeout(url, timeout) {
+    //fetch anh url va thoi gian het han
     return new Promise(function (resolve, reject) {
-      var controller = new AbortController();
-      var signal = controller.signal;
+      // 2 trang thai resolve va reject
+      var controller = new AbortController(); // tao 1 controller huy fetch
+
+      var signal = controller.signal; // dung de lien ket vs fetch
+
       var timeoutId = setTimeout(function () {
         controller.abort();
-      }, timeout);
+      }, timeout); // set time out de het time out roi goi abort
+
       fetch(url, {
         signal: signal
-      }).then(function (response) {
-        clearTimeout(timeoutId);
+      }) // url va doi so signal
+      .then(function (response) {
+        // tra ve rq
+        clearTimeout(timeoutId); // huy time out neu dc tra ve
 
         if (!response.ok) {
           throw new Error("HTTP error! Status: " + response.status);
@@ -39,6 +46,7 @@ cc.Class({
 
         return response.blob();
       }).then(function (blob) {
+        // lay du lieu
         var img = new Image();
         img.src = URL.createObjectURL(blob);
 
@@ -50,6 +58,7 @@ cc.Class({
           return reject(err);
         };
       })["catch"](function (error) {
+        // neu k du thoi gian
         if (error.name === 'AbortError') {
           reject(new Error('Request timed out'));
         } else {
@@ -67,21 +76,24 @@ cc.Class({
         while (1) {
           switch (_context.prev = _context.next) {
             case 0:
+              //tai nhieu anh song song
               urls = ['https://picsum.photos/id/237/300/200', 'https://fastly.picsum.photos/id/3/5000/3333.jpg?hmac=GDjZ2uNWE3V59PkdDaOzTOuV3tPWWxJSf4fNcxu4S2g', 'https://fastly.picsum.photos/id/1/5000/3333.jpg?hmac=Asv2DU3rA_5D1xSe22xZK47WEAN0wjWeFOhzd13ujW4', 'https://fastly.picsum.photos/id/2/5000/3333.jpg?hmac=_KDkqQVttXw_nM-RyJfLImIbafFrqLsuGO5YuHqD-qQ', 'https://fastly.picsum.photos/id/3/5000/3333.jpg?hmac=GDjZ2uNWE3V59PkdDaOzTOuV3tPWWxJSf4fNcxu4S2g'];
               promises = urls.map(function (url) {
-                return _this.fetchImageWithTimeout(url, _this.TimeOut).then(function (img) {
-                  return {
-                    status: 'fulfilled',
-                    img: img,
-                    url: url
-                  };
-                })["catch"](function (error) {
-                  return {
-                    status: 'rejected',
-                    error: error,
-                    url: url
-                  };
-                });
+                return (// duyet qua URL, tao promise
+                  _this.fetchImageWithTimeout(url, _this.TimeOut).then(function (img) {
+                    return {
+                      status: 'fulfilled',
+                      img: img,
+                      url: url
+                    };
+                  })["catch"](function (error) {
+                    return {
+                      status: 'rejected',
+                      error: error,
+                      url: url
+                    };
+                  })
+                );
               });
               _context.next = 4;
               return Promise.all(promises);
@@ -89,23 +101,28 @@ cc.Class({
             case 4:
               results = _context.sent;
 
+              // doi anh tai thanh cong or that bai
               for (i = 0; i < results.length; i++) {
                 result = results[i];
 
                 if (result.status === 'fulfilled') {
                   _this.Tile.string = "Image loaded:";
-                  _this.Body.string = result.url;
+                  _this.Body.string = result.url; // day la anh dc tai thanh cong
+
                   texture = new cc.Texture2D();
                   texture.initWithElement(result.img);
-                  texture.handleLoadedTexture();
-                  spriteFrame = new cc.SpriteFrame(texture);
+                  texture.handleLoadedTexture(); // cap nhat UI
+
+                  spriteFrame = new cc.SpriteFrame(texture); // tao spriteframe
 
                   if (i < _this.spriteArray.length) {
+                    // gan anh vao sprite tuong ung
                     _this.spriteArray[i].spriteFrame = spriteFrame;
                   } else {
                     console.warn("No sprite available for index " + i);
                   }
                 } else {
+                  // neu loi hien thi loi trong UI + log loi~
                   _this.Tile.string = "Error:";
                   _this.Body.string = result.error.message;
                   console.error("Error loading image:", result.url, result.error);

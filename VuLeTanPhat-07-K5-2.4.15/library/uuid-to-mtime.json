@@ -594,14 +594,14 @@
     "meta": 1747297601483,
     "relativePath": "Day7/Script/Bai4_D7.js"
   },
-  "3e83d145-0bf8-4b44-9370-59e7ae68142f": {
-    "asset": 1747295573434,
-    "meta": 1747297606886,
-    "relativePath": "Day7/Script/Bai6_D7.js"
-  },
   "c15a07be-06d6-451d-ab2d-2a7c89474ef3": {
     "asset": 1747296910281,
     "meta": 1747297585737,
     "relativePath": "Day7/Script/Bai5_D7.js"
+  },
+  "3e83d145-0bf8-4b44-9370-59e7ae68142f": {
+    "asset": 1747300398664,
+    "meta": 1747300457292,
+    "relativePath": "Day7/Script/Bai6_D7.js"
   }
 }
