@@ -93,3 +93,6 @@ cc.Class({
         this.call();
     },
 });
+
+// abort.controller co xai dc cho khac, VD: axios
+// duoc su dung o cho nao, platform nao ho tro

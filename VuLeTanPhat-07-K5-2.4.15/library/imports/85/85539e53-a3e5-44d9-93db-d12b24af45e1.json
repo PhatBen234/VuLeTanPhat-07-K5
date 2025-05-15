@@ -399,9 +399,10 @@
       "__id__": 7
     },
     "_enabled": true,
-    "resultLabel": {
-      "__id__": 6
-    },
+    "TimeOut": 10000,
+    "Tile": null,
+    "Body": null,
+    "spriteArray": [],
     "_id": "ddqc6gcndIO4XgepKFZCSM"
   },
   {
