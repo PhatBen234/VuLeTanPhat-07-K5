@@ -1,19 +1,4 @@
 
-require('./assets/Day6/Bai10_D6');
-require('./assets/Day6/Bai11_D6');
-require('./assets/Day6/Bai12_D6');
-require('./assets/Day6/Bai13_D6');
-require('./assets/Day6/Bai14_D6');
-require('./assets/Day6/Bai15_D6');
-require('./assets/Day6/Bai1_D6');
-require('./assets/Day6/Bai2_D6');
-require('./assets/Day6/Bai3_D6');
-require('./assets/Day6/Bai4_D6');
-require('./assets/Day6/Bai5_D6');
-require('./assets/Day6/Bai6_D6');
-require('./assets/Day6/Bai7_D6');
-require('./assets/Day6/Bai8_D6');
-require('./assets/Day6/Bai9_D6');
 require('./assets/Day7/Script/Bai1_D7');
 require('./assets/Day7/Script/Bai2_D7');
 require('./assets/Day7/Script/Bai3_D7');
