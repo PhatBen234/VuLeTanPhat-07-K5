@@ -10,6 +10,30 @@
                     };
                     function __define (exports, require, module) {
                         if (!nodeEnv) {__quick_compile_project__.registerModule(__filename, module);}
+require('./assets/Day6/Bai1');
+require('./assets/Day6/Bai10');
+require('./assets/Day6/Bai11');
+require('./assets/Day6/Bai12');
+require('./assets/Day6/Bai13');
+require('./assets/Day6/Bai14');
+require('./assets/Day6/Bai15');
+require('./assets/Day6/Bai2');
+require('./assets/Day6/Bai3');
+require('./assets/Day6/Bai4');
+require('./assets/Day6/Bai5');
+require('./assets/Day6/Bai6');
+require('./assets/Day6/Bai7');
+require('./assets/Day6/Bai8');
+require('./assets/Day6/Bai9');
+require('./assets/Day7/Script/Bai1');
+require('./assets/Day7/Script/Bai2');
+require('./assets/Day7/Script/Bai3');
+require('./assets/Day7/Script/Bai4');
+require('./assets/Day7/Script/Bai5');
+require('./assets/Day7/Script/Bai6');
+require('./assets/Day7/Script/Bai7');
+require('./assets/Day7/Script/Bai8');
+require('./assets/Day7/Script/Bai9');
 
                     }
                     if (nodeEnv) {

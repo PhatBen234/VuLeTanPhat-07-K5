@@ -500,8 +500,8 @@
     "relativePath": "model/primitives.fbx"
   },
   "6193ea41-4bd8-4efc-a68e-17ec66ca4604": {
-    "asset": 1747213046017,
-    "meta": 1747213081987,
+    "asset": 1747283760790,
+    "meta": 1747285840188,
     "relativePath": "Day6"
   },
   "d22f96bb-16f5-4d85-a84d-12ce9f9fea5e": {
@@ -585,18 +585,18 @@
     "relativePath": "Day7"
   },
   "dc277c0b-faf9-446b-8d3f-5bad17ef5aca": {
-    "asset": 1747274424028,
-    "meta": 1747283761129,
+    "asset": 1747285746381,
+    "meta": 1747285840189,
     "relativePath": "Day7/Scence"
   },
   "a6600133-f865-495b-9980-95d7ef9f8dfa": {
-    "asset": 1747281622894,
-    "meta": 1747283761129,
+    "asset": 1747285746381,
+    "meta": 1747285840189,
     "relativePath": "Day7/Script"
   },
   "1026e2e3-985e-400c-9252-c1dab628ef2d": {
-    "asset": 1747274424028,
-    "meta": 1747283761191,
+    "asset": 1747285746382,
+    "meta": 1747285840323,
     "relativePath": "Day7/Script/Bai1.js"
   },
   "aa987083-504c-4146-ba5d-45833b10acb6": {
@@ -640,8 +640,8 @@
     "relativePath": "Day7/Script/Bai9.js"
   },
   "e032f22e-1e0c-44b9-b55f-e8920661632a": {
-    "asset": 1747216233901,
-    "meta": 1747283761476,
+    "asset": 1747285746381,
+    "meta": 1747285840325,
     "relativePath": "Day7/Scence/Bai1.fire"
   },
   "7fbf4063-50bc-41a6-b1f8-f2547e945d4a": {
